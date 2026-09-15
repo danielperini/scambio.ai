@@ -1,9 +1,8 @@
 const NODES = [
-  { label: "Ruído social", sub: "áudios, notas, demandas", save: null },
-  { label: "Transcrição IA", sub: "áudio → texto estruturado", save: "120h de digitação automatizadas" },
+  { label: "Interação comunitária", sub: "notas, áudios, fotos, demandas, mensagens, análise de ar, dados, documentos", save: null },
+  { label: "Textos e dados estruturados", sub: "transcrição & estruturação por IA", save: "120h de digitação automatizadas" },
   { label: "Classificação", sub: "tags, prioridade, território", save: "Triagem manual eliminada" },
-  { label: "Insight estratégico", sub: "tendências & riscos", save: "Decisão em dias, não semanas" },
-  { label: "Relatório ESG", sub: "pronto para stakeholders", save: "Relatórios em horas" },
+  { label: "Insights, tendências, riscos e soluções", sub: "direção executável", save: "Decisão em dias, não semanas" },
 ];
 
 export default function AiEngine() {
