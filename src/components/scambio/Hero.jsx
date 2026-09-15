@@ -34,12 +34,6 @@ export default function Hero() {
             >
               Conheça a plataforma
             </a>
-            <a
-              href="#cta-final"
-              className="inline-flex justify-center items-center gap-2 border border-border hover:border-primary/50 text-foreground font-semibold px-6 py-3.5 rounded-xl transition-colors"
-            >
-              Solicite uma demonstração
-            </a>
           </div>
 
           <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
