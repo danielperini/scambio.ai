@@ -1,22 +1,48 @@
+import { Image } from "@/components/ui/image";
+
 const TEAL = "#1E4E5A";
 const TERRA = "#C9795C";
 const MUTED = "#5A7775";
 const LIGHT = "#F4F8F6";
 
+const IMG = {
+  observar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/20f6bc015_15f20d64b_preview-lens-4a4ed909-b130-46cb-94ae-15ef5a28d78f.png",
+  registrar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/ed694d05a_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
+  contextualizar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/3a084ff9f_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png",
+  analisar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/534587245_2027f2c5b_preview-lens-625ce2ff-a510-4cf4-84a3-ba50125b1228.png",
+  decidir:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/9e97e5f5f_5bf617207_preview-lens-b17e181e-bb92-4f4c-b9f7-9f16b073f9e2.png",
+};
+
 export const STEPS = [
   { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território.", kind: "wave" },
-  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto.", kind: "pins" },
-  { n: "03", t: "Registrar", d: "Documentar registros de forma estruturada.", kind: "form" },
+  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto.", kind: "pins", img: IMG.observar },
+  { n: "03", t: "Registrar", d: "Documentar registros de forma estruturada.", kind: "form", img: IMG.registrar },
   { n: "04", t: "Organizar", d: "Classificar informações em categorias e tags.", kind: "grid" },
   { n: "05", t: "Relacionar", d: "Conectar atores, organizações e territórios.", kind: "net" },
-  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território.", kind: "layers" },
-  { n: "07", t: "Analisar", d: "Comparar indicadores e visualizar padrões.", kind: "chart" },
+  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território.", kind: "layers", img: IMG.contextualizar },
+  { n: "07", t: "Analisar", d: "Comparar indicadores e visualizar padrões.", kind: "chart", img: IMG.analisar },
   { n: "08", t: "Compreender", d: "Sintetizar descobertas em conhecimento.", kind: "report" },
-  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências.", kind: "board" },
+  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências.", kind: "board", img: IMG.decidir },
 ];
 
-function Screen({ kind }) {
+function Screen({ kind, img }) {
   const common = { viewBox: "0 0 300 188", className: "w-full h-full" };
+  if (img)
+    return (
+      <div className="aspect-[16/10] w-full bg-secondary/40">
+        <Image
+          src={img}
+          alt="Tela da plataforma SCAMBIO.IA"
+          className="w-full h-full"
+          fittingType="fit"
+        />
+      </div>
+    );
   if (kind === "wave")
     return (
       <svg {...common}>
@@ -139,7 +165,7 @@ export function Device({ step }) {
       <div className="w-full max-w-md">
         <div className="rounded-t-2xl border border-border bg-background p-2 shadow-sm">
           <div className="rounded-lg overflow-hidden bg-secondary/40">
-            <Screen kind={step.kind} />
+            <Screen kind={step.kind} img={step.img} />
           </div>
         </div>
         <div className="h-2.5 rounded-b-xl bg-foreground/80 mx-auto w-1/3" />
