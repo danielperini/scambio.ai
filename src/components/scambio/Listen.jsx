@@ -7,56 +7,61 @@ const INTRO = [
 ];
 
 const PLATFORM = [
-  "A SCAMBIO.IA foi pensada para apoiar esse processo de conhecimento.",
-  "A plataforma reúne informações produzidas diretamente nas relações com o território: conversas, reuniões, entrevistas, visitas de campo, relatos, observações, registros de atividades e interações com comunidades, pessoas e organizações.",
+  "A SCAMBIO.IA organiza informações produzidas diretamente nas relações com o território: conversas, reuniões, entrevistas, visitas de campo, relatos, observações, atividades e interações com comunidades, pessoas e organizações.",
+  "Mas uma leitura territorial consistente não se limita ao que é observado diretamente.",
+  "A plataforma também pode reunir e relacionar fotografias, vídeos, áudios, documentos, relatórios, PDFs, textos, documentos oficiais, notícias, dados públicos e outras fontes secundárias que contribuam para compreender determinado contexto.",
+];
+
+const FIELD = [
+  "Uma percepção registrada em uma entrevista pode ser analisada junto a indicadores públicos. Uma demanda identificada em uma comunidade pode ser relacionada a informações sobre infraestrutura, população, renda, educação, saúde, mobilidade, meio ambiente ou atividade econômica.",
+  "Essa combinação permite confrontar diferentes perspectivas sobre uma mesma realidade.",
+  "O dado secundário ajuda a contextualizar aquilo que foi observado no campo. A experiência do território, por sua vez, ajuda a interpretar aquilo que os indicadores apresentam.",
+  "A SCAMBIO.IA cria condições para aproximar essas duas dimensões: o conhecimento produzido na relação direta com o território e o conhecimento disponível em bases públicas e outras fontes de informação.",
+];
+
+const COMPARE = [
+  "Quando informações de diferentes localidades são organizadas dentro de uma mesma estrutura, torna-se possível ampliar a escala da análise.",
+  "Territórios podem ser comparados segundo características sociais, ambientais, econômicas, demográficas, relacionais e territoriais, permitindo identificar semelhanças, diferenças, padrões e situações específicas.",
+  "Isso possibilita sair de uma leitura exclusivamente localizada para construir análises comparadas em larga escala.",
+  "Uma organização que atua em diferentes municípios, comunidades ou regiões pode observar, por exemplo, quais temas aparecem de forma recorrente, onde determinadas demandas se concentram, como diferentes territórios respondem a uma mesma questão ou quais características estão associadas a determinados padrões de relacionamento.",
+  "A comparação não elimina as particularidades de cada território. Ao contrário, ajuda a reconhecê-las.",
 ];
 
 const SOURCES = [
-  "Mas a leitura do território não se limita ao contato direto.",
-  "Também podem ser incorporadas fotografias, vídeos, áudios, documentos, relatórios, PDFs, textos, documentos oficiais, notícias e outras fontes de informação que contribuam para compreender determinado contexto.",
+  "Uma entrevista revela uma percepção.",
+  "Uma fotografia registra uma situação.",
+  "Um relatório apresenta um contexto.",
+  "Uma notícia registra um acontecimento.",
+  "Um indicador público dimensiona uma realidade.",
+  "Uma interação revela uma relação.",
 ];
 
-const PERSPECTIVES = [
-  "Cada registro pode trazer uma perspectiva diferente. Uma entrevista revela percepções. Um relato registra uma experiência. Uma fotografia evidencia uma situação. Um documento apresenta uma decisão. Uma notícia registra um acontecimento. Uma interação mostra como uma relação está se construindo.",
-  "A SCAMBIO.IA organiza essas diferentes fontes para que possam ser consultadas, classificadas e relacionadas.",
-  "Temas, pessoas, organizações, comunidades, localidades, demandas, acontecimentos, projetos e períodos podem ser associados aos registros, permitindo construir conexões que dificilmente aparecem quando cada informação permanece armazenada de forma isolada.",
+const SOURCES_CLOSING = [
+  "Quando essas informações podem ser relacionadas, o território deixa de ser observado por uma única lente.",
+  "A SCAMBIO.IA permite construir uma base de conhecimento na qual diferentes evidências podem ser conectadas, analisadas e revisitadas ao longo do tempo.",
+  "O objetivo não é simplesmente acumular dados. É compreender relações, contextos e mudanças.",
 ];
 
-const CONTEXT = [
-  "A observação territorial também considera aquilo que está ao redor das relações.",
-  "A forma como as pessoas vivem pode estar relacionada à disponibilidade de serviços, à mobilidade, às atividades econômicas, à infraestrutura, às características ambientais, à presença de rios, estradas e equipamentos públicos, à urbanidade ou à ruralidade, às formas de ocupação e às transformações que acontecem ao longo do tempo.",
-  "Por isso, a SCAMBIO.IA não trata a informação apenas como um dado isolado.",
+const SCALE = [
+  "A capacidade de trabalhar com diferentes fontes e comparar grandes volumes de informação amplia a capacidade analítica das equipes sem transformar o território em apenas uma coleção de indicadores.",
 ];
 
-const AXIOMS = [
-  "Uma demanda tem uma história.",
-  "Um ator tem relações.",
-  "Um acontecimento tem contexto.",
-  "Um território tem dinâmica.",
+const SCALE_DUO = [
+  { k: "A escala", v: "serve para encontrar padrões." },
+  { k: "O contexto", v: "serve para interpretá-los." },
 ];
 
-const CLOSING_INTRO = [
-  "Ao organizar essas informações em conjunto, a plataforma ajuda as equipes a construir uma compreensão mais contextualizada da realidade territorial.",
+const SCALE_FINAL = [
+  "É nessa combinação que a inteligência territorial ganha sentido: aproximar o conhecimento produzido no campo dos dados que ajudam a explicar o contexto, relacionar diferentes evidências e permitir que a análise alcance múltiplos territórios sem perder de vista as particularidades de cada um.",
 ];
 
-const HUMAN = [
-  "A tecnologia apoia a organização e o processamento das informações, mas o conhecimento territorial continua sendo construído pelas pessoas que conhecem, acompanham e se relacionam com aquele território.",
-  "A SCAMBIO.IA cria condições para que esse conhecimento seja registrado, preservado, compartilhado, relacionado e retomado quando necessário.",
-];
-
-const KEEP = [
-  "O que foi ouvido não se perde em uma anotação.",
-  "O que foi observado não fica restrito a uma fotografia.",
-  "O que foi registrado pode ser relacionado a outros acontecimentos.",
-  "E diferentes perspectivas podem ser analisadas dentro de um mesmo contexto.",
-];
-
-const VERBS = [
-  { k: "Escutar", v: "é reconhecer as vozes do território." },
-  { k: "Observar", v: "é perceber o que acontece nele." },
-  { k: "Relacionar", v: "é compreender suas conexões." },
-  { k: "Conhecer", v: "é transformar essas evidências em contexto para a decisão." },
-];
+function SubHeading({ children }) {
+  return (
+    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-foreground mt-16 mb-6">
+      {children}
+    </h3>
+  );
+}
 
 export default function Listen() {
   return (
@@ -71,6 +76,8 @@ export default function Listen() {
           Escutar o território.
           <br />
           Observar o que acontece.
+          <br />
+          Relacionar diferentes fontes de conhecimento.
         </h2>
 
         <div className="mt-8 space-y-5">
@@ -87,87 +94,66 @@ export default function Listen() {
           ))}
         </div>
 
-        <div className="mt-10 space-y-6 text-muted-foreground leading-relaxed">
-          <p className="font-heading font-semibold text-lg text-foreground">{PLATFORM[0]}</p>
-          <p>{PLATFORM[1]}</p>
-        </div>
-
         <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
+          <p>{PLATFORM[0]}</p>
           <p className="font-heading font-semibold text-xl text-foreground border-l-2 border-primary pl-5">
-            {SOURCES[0]}
+            {PLATFORM[1]}
           </p>
-          <p>{SOURCES[1]}</p>
+          <p>{PLATFORM[2]}</p>
         </div>
 
-        <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
-          {PERSPECTIVES.map((p, i) => (
+        {/* O campo encontra os dados */}
+        <SubHeading>O campo encontra os dados</SubHeading>
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
+          {FIELD.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
 
-        {/* O território como contexto */}
-        <div className="mt-16">
-          <h3 className="font-heading font-bold text-2xl text-foreground mb-6">
-            O território como contexto
-          </h3>
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
-            {CONTEXT.slice(0, 2).map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-          <p className="mt-6 font-heading font-semibold text-lg text-foreground border-l-2 border-primary pl-5">
-            {CONTEXT[2]}
-          </p>
-          <ul className="mt-6 grid sm:grid-cols-2 gap-3">
-            {AXIOMS.map((a) => (
-              <li key={a} className="flex items-start gap-3 text-foreground">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                <span className="font-heading font-semibold">{a}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 space-y-6 text-muted-foreground leading-relaxed">
-            {CLOSING_INTRO.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+        {/* Da leitura de um território à comparação entre territórios */}
+        <SubHeading>Da leitura de um território à comparação entre territórios</SubHeading>
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
+          {COMPARE.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
 
-        {/* Da escuta à compreensão */}
-        <div className="mt-16">
-          <h3 className="font-heading font-bold text-2xl text-foreground mb-6">
-            Da escuta à compreensão
-          </h3>
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
-            {HUMAN.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-          <ul className="mt-8 space-y-4">
-            {KEEP.map((k) => (
-              <li key={k} className="flex items-start gap-3 text-foreground leading-relaxed">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                <span>{k}</span>
-              </li>
-            ))}
-          </ul>
-
-          <dl className="mt-12 grid sm:grid-cols-2 gap-6">
-            {VERBS.map(({ k, v }) => (
-              <div key={k} className="rounded-xl border border-border bg-background p-5">
-                <dt className="font-heading font-bold text-xl text-primary">{k}</dt>
-                <dd className="mt-1 text-muted-foreground">{v}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <p className="mt-10 font-heading font-black text-2xl sm:text-3xl leading-tight text-foreground">
-            Escutar. Observar. Relacionar. Compreender.
-          </p>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Essa é a primeira etapa da inteligência territorial da SCAMBIO.IA.
-          </p>
+        {/* Diferentes fontes. Um mesmo contexto. */}
+        <SubHeading>Diferentes fontes. Um mesmo contexto.</SubHeading>
+        <ul className="space-y-3">
+          {SOURCES.map((s) => (
+            <li key={s} className="flex items-start gap-3 text-foreground leading-relaxed">
+              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              <span>{s}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
+          {SOURCES_CLOSING.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
+
+        {/* Escala sem perder o território */}
+        <SubHeading>Escala sem perder o território</SubHeading>
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
+          {SCALE.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+        <dl className="mt-8 grid sm:grid-cols-2 gap-4">
+          {SCALE_DUO.map(({ k, v }) => (
+            <div key={k} className="rounded-xl border border-border bg-background p-5">
+              <dt className="font-heading font-bold text-xl text-primary">{k}</dt>
+              <dd className="mt-1 text-muted-foreground">{v}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-8 text-muted-foreground leading-relaxed">{SCALE_FINAL[0]}</p>
+
+        <p className="mt-12 font-heading font-black text-2xl sm:text-3xl leading-tight text-foreground">
+          Escutar. Observar. Contextualizar. Relacionar. Comparar. Compreender.
+        </p>
       </div>
     </section>
   );
