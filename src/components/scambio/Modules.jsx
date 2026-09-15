@@ -175,7 +175,16 @@ function Pausable({ kind }) {
     const el = ref.current;
     if (!el) return;
     const svg = el.querySelector("svg");
-    if (!svg || !("IntersectionObserver" in window)) return;
+    if (!svg) return;
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      try { svg.pauseAnimations && svg.pauseAnimations(); } catch {}
+      return;
+    }
+    if (!("IntersectionObserver" in window)) return;
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -191,7 +200,7 @@ function Pausable({ kind }) {
     return () => io.disconnect();
   }, []);
   return (
-    <div ref={ref} className="w-full h-full">
+    <div ref={ref} className="w-full h-full select-none">
       <Visual kind={kind} />
     </div>
   );

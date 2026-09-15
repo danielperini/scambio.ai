@@ -2,7 +2,7 @@ export default function SectionHead({ tag, number, title, subtitle }) {
   return (
     <div className="mb-10">
       {(tag || number) && (
-        <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary mb-5">
+        <span className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-primary mb-5">
           <span className="w-6 h-px bg-primary" />
           {number ? `${number} — ` : ""}
           {tag}

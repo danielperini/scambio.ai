@@ -33,36 +33,35 @@
     --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    color-scheme: light dark;
+    color-scheme: light;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 195 32% 10%;
-      --foreground: 40 35% 92%;
-      --card: 195 28% 13%;
-      --card-foreground: 40 35% 92%;
-      --popover: 195 28% 13%;
-      --popover-foreground: 40 35% 92%;
-      --primary: 16 58% 64%;
-      --primary-foreground: 195 32% 10%;
-      --secondary: 195 22% 18%;
-      --secondary-foreground: 40 35% 92%;
-      --muted: 195 20% 16%;
-      --muted-foreground: 170 16% 72%;
-      --accent: 16 58% 64%;
-      --accent-foreground: 195 32% 10%;
-      --destructive: 0 62% 55%;
-      --destructive-foreground: 0 0% 98%;
-      --border: 195 18% 24%;
-      --input: 195 18% 24%;
-      --ring: 16 58% 64%;
-      --chart-1: 16 58% 64%;
-      --chart-2: 192 45% 58%;
-      --chart-3: 190 30% 55%;
-      --chart-4: 43 90% 68%;
-      --chart-5: 330 60% 65%;
-    }
+  .dark {
+    color-scheme: dark;
+    --background: 195 32% 10%;
+    --foreground: 40 35% 92%;
+    --card: 195 28% 13%;
+    --card-foreground: 40 35% 92%;
+    --popover: 195 28% 13%;
+    --popover-foreground: 40 35% 92%;
+    --primary: 16 58% 64%;
+    --primary-foreground: 195 32% 10%;
+    --secondary: 195 22% 18%;
+    --secondary-foreground: 40 35% 92%;
+    --muted: 195 20% 16%;
+    --muted-foreground: 170 16% 72%;
+    --accent: 16 58% 64%;
+    --accent-foreground: 195 32% 10%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 18% 24%;
+    --input: 195 18% 24%;
+    --ring: 16 58% 64%;
+    --chart-1: 16 58% 64%;
+    --chart-2: 192 45% 58%;
+    --chart-3: 190 30% 55%;
+    --chart-4: 43 90% 68%;
+    --chart-5: 330 60% 65%;
   }
 }
 
@@ -105,19 +104,20 @@
   }
   .safe-top { padding-top: env(safe-area-inset-top); }
   .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
-  @media (prefers-color-scheme: dark) {
-    .glass {
-      background: rgba(30, 78, 90, 0.55);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(201, 121, 92, 0.18);
-    }
-    .topo-bg {
-      background-image:
-        radial-gradient(circle at 18% 22%, rgba(201, 121, 92, 0.10), transparent 42%),
-        radial-gradient(circle at 82% 68%, rgba(120, 180, 170, 0.08), transparent 46%),
-        repeating-radial-gradient(circle at 50% 50%, rgba(160, 200, 190, 0.05) 0, rgba(160, 200, 190, 0.05) 1px, transparent 1px, transparent 40px);
-    }
+  .dark .glass {
+    background: rgba(30, 78, 90, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(201, 121, 92, 0.18);
+  }
+  .dark .topo-bg {
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(201, 121, 92, 0.10), transparent 42%),
+      radial-gradient(circle at 82% 68%, rgba(120, 180, 170, 0.08), transparent 46%),
+      repeating-radial-gradient(circle at 50% 50%, rgba(160, 200, 190, 0.05) 0, rgba(160, 200, 190, 0.05) 1px, transparent 1px, transparent 40px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bi-dots::after { animation: none; }
   }
   .data-stream {
     background: linear-gradient(180deg, transparent, rgba(201, 121, 92, 0.5), transparent);

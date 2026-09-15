@@ -18,7 +18,7 @@ export default function MultipleSources() {
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {GROUPS.map((g) => (
             <div key={g.tag} className="rounded-xl border border-border bg-background p-5">
-              <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">
+              <p className="text-sm font-mono uppercase tracking-widest text-primary mb-3">
                 {g.tag}
               </p>
               <ul className="space-y-1.5">

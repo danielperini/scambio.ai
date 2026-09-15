@@ -13,7 +13,7 @@ export default function Knowledge() {
   return (
     <section id="conceito" className="relative py-24 lg:py-32">
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
-        <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-primary mb-6">
+        <span className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.2em] text-primary mb-6">
           <span className="w-6 h-px bg-primary" />
           Conceito
         </span>

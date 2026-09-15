@@ -30,7 +30,7 @@ export default function Listen() {
   return (
     <section id="escuta-observacao" className="relative py-20 lg:py-28 bg-secondary/30">
       <div className="max-w-5xl mx-auto px-6 lg:px-10">
-        <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary mb-5">
+        <span className="inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-primary mb-5">
           <span className="w-6 h-px bg-primary" />
           01 — Escuta &amp; Observação
         </span>
@@ -71,7 +71,7 @@ export default function Listen() {
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Icon className="h-5 w-5" strokeWidth={1.75} />
               </span>
-              <span className="text-xs font-medium text-foreground text-center">{label}</span>
+              <span className="text-sm font-medium text-foreground text-center">{label}</span>
             </div>
           ))}
         </div>

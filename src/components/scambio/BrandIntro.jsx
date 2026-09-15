@@ -18,9 +18,11 @@ export default function BrandIntro() {
     const start = performance.now();
     const dur = 2600;
     let raf;
+    let last = -1;
     const tick = (now) => {
       const p = Math.min(100, ((now - start) / dur) * 100);
-      setPct(Math.round(p));
+      const r = Math.round(p);
+      if (r !== last) { last = r; setPct(r); }
       if (p < 100) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -71,7 +73,7 @@ export default function BrandIntro() {
         .bi-dots::after { content: ""; animation: bi-dots 1.4s steps(1, end) infinite; }
       `}</style>
 
-      <div className="bi-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background">
+      <div className="bi-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background select-none">
         <img
           src={LOGO_URL}
           alt="Scambio.ai — Conhecimento Social e Territorial"

@@ -1,4 +1,14 @@
+import { useEffect, useRef } from "react";
+
 export default function Hero() {
+  const svgRef = useRef(null);
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      try { svg.pauseAnimations && svg.pauseAnimations(); } catch {}
+    }
+  }, []);
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden topo-bg pt-16">
       <div className="pointer-events-none absolute left-[18%] top-0 bottom-0 w-px data-stream opacity-40" />
@@ -6,7 +16,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
-          <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground mb-6">
+          <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground mb-6 select-none">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             Conhecimento Social e Territorial
           </span>
@@ -30,7 +40,7 @@ export default function Hero() {
 
         <div className="lg:col-span-5 relative hidden lg:block">
           <div className="relative aspect-square glass rounded-3xl overflow-hidden glow-ring">
-            <svg viewBox="0 0 400 400" className="absolute inset-0 w-full h-full">
+            <svg ref={svgRef} viewBox="0 0 400 400" className="absolute inset-0 w-full h-full">
               <defs>
                 <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stopColor="#C9795C" stopOpacity="0.8" />
@@ -61,7 +71,7 @@ export default function Hero() {
                 </g>
               ))}
             </svg>
-            <div className="absolute bottom-5 left-5 right-5 glass rounded-xl px-4 py-3 text-sm">
+            <div className="absolute bottom-5 left-5 right-5 glass rounded-xl px-4 py-3 text-sm select-none">
               <p className="text-muted-foreground">Pontos de demanda ativos</p>
               <p className="font-heading font-bold text-foreground">Mapa territorial em tempo real</p>
             </div>

@@ -10,6 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="https://media.base44.com/images/public/6aa8b10af4dead65826fec68/efe40e33f_ChatGPTImage15desetde202600_05_48.png" />
     <title>Scambio.ai — Inteligência Territorial, Amplificada</title>
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem('scambio-theme') || 'light';
+          var d = m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (d) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </head>
   <body>
