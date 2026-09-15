@@ -23,8 +23,8 @@ const PILARES = [
   {
     id: "decisao",
     tag: "04 — Análise & Decisão",
-    desc: "Transformar informações relacionadas em conhecimento para acompanhamento e decisão.",
-    points: ["Análise comparada", "Indicadores e dashboards", "Relatórios"],
+    desc: "Converter evidências relacionadas em conhecimento organizado — comparando contextos, acompanhando indicadores e produzindo sínteses que sustentam decisões informadas no território.",
+    points: ["Análise comparada entre contextos", "Indicadores e dashboards", "Relatórios e sínteses"],
     visual: "report",
   },
 ];
@@ -89,13 +89,38 @@ function Visual({ kind }) {
   }
   return (
     <svg viewBox="0 0 300 200" className="w-full h-full">
-      <rect x="30" y="30" width="240" height="22" rx="4" fill={TERRA} opacity="0.35" />
-      <rect x="30" y="62" width="180" height="10" rx="2" fill={MUTED} opacity="0.3" />
-      <rect x="30" y="80" width="210" height="10" rx="2" fill={MUTED} opacity="0.25" />
-      <rect x="30" y="110" width="110" height="60" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
-      <rect x="160" y="110" width="110" height="60" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
-      <text x="85" y="145" fontSize="11" fill={TEAL} textAnchor="middle">Análise</text>
-      <text x="215" y="145" fontSize="11" fill={TEAL} textAnchor="middle">Decisão</text>
+      <rect width="300" height="200" fill={LIGHT} />
+      {/* header bar */}
+      <rect x="20" y="18" width="260" height="16" rx="4" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <circle cx="30" cy="26" r="2.5" fill={TERRA} />
+      <rect x="40" y="23" width="120" height="6" rx="2" fill={MUTED} opacity="0.35" />
+      <rect x="240" y="23" width="30" height="6" rx="2" fill={TERRA} opacity="0.7" />
+      {/* KPI cards */}
+      <rect x="20" y="44" width="78" height="34" rx="5" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <rect x="28" y="51" width="34" height="5" rx="2" fill={MUTED} opacity="0.3" />
+      <text x="28" y="72" fontSize="13" fontWeight="700" fill={TEAL}>87%</text>
+      <rect x="111" y="44" width="78" height="34" rx="5" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <rect x="119" y="51" width="34" height="5" rx="2" fill={MUTED} opacity="0.3" />
+      <text x="119" y="72" fontSize="13" fontWeight="700" fill={TERRA}>+24</text>
+      <rect x="202" y="44" width="78" height="34" rx="5" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <rect x="210" y="51" width="34" height="5" rx="2" fill={MUTED} opacity="0.3" />
+      <text x="210" y="72" fontSize="13" fontWeight="700" fill={TEAL}>12</text>
+      {/* chart */}
+      <rect x="20" y="86" width="148" height="96" rx="5" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <rect x="28" y="93" width="50" height="5" rx="2" fill={MUTED} opacity="0.3" />
+      {[38, 58, 46, 70, 54, 80].map((h, i) => (
+        <rect key={i} x={28 + i * 22} y={172 - h} width="14" height={h} rx="2.5" fill={i % 2 ? TERRA : TEAL} opacity={i % 2 ? 0.85 : 0.5} />
+      ))}
+      <path d="M28 150 L50 130 L72 138 L94 110 L116 120 L138 96" fill="none" stroke={TEAL} strokeWidth="1.5" />
+      {/* report list */}
+      <rect x="178" y="86" width="102" height="96" rx="5" fill="#fff" stroke={TEAL} strokeOpacity="0.25" />
+      <rect x="186" y="93" width="50" height="5" rx="2" fill={MUTED} opacity="0.3" />
+      {[0, 1, 2, 3].map((i) => (
+        <g key={i}>
+          <rect x="186" y={108 + i * 17} width="86" height="4" rx="2" fill={MUTED} opacity={0.28 - i * 0.04} />
+          <circle cx="190" cy={118 + i * 17} r="2" fill={i === 1 ? TERRA : TEAL} opacity="0.7" />
+        </g>
+      ))}
     </svg>
   );
 }
