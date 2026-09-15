@@ -36,18 +36,6 @@ export default function Hero() {
             </a>
           </div>
 
-          <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-            {[
-              { k: "4", v: "pilares integrados" },
-              { k: "10+", v: "tipos de fonte" },
-              { k: "1", v: "memória territorial" },
-            ].map((s) => (
-              <div key={s.v}>
-                <dt className="font-heading font-bold text-2xl text-foreground">{s.k}</dt>
-                <dd className="text-sm text-muted-foreground mt-1">{s.v}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
         <div className="lg:col-span-5 relative hidden lg:block">
