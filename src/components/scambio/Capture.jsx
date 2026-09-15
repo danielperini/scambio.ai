@@ -38,7 +38,7 @@ export default function Capture() {
         </span>
 
         <h2 className="font-heading font-black text-4xl sm:text-5xl leading-[1.08] tracking-tight text-balance max-w-2xl">
-          Captura de campo que vira conhecimento
+          Conhecimento territorial amplificado
         </h2>
 
         <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed max-w-3xl">
