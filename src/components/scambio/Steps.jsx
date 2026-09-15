@@ -17,13 +17,19 @@ const IMG = {
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/bd8bb065f_b842ee917_preview-lens-de96ea78-ec3f-4cfa-afac-63b9cd725da8.png",
   referenciais:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/0a58d2a2a_cbf5389a9_preview-lens-0c0d5c72-0bd2-486a-b622-08e30bb65c72.png",
+  mapa:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/401e89a51_5e562b67e_preview-lens-77567479-868e-4328-ae30-64288d16b776.png",
+  registro:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/b924652fe_c5a17a276_preview-lens-6dd916f1-27c9-4ae2-95d9-3c56ab23633f.png",
+  organizar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/7f0b3d385_7eec5e1b7_preview-lens-a64dd7eb-52a4-4798-8b26-7492a23e3614.png",
 };
 
 export const STEPS = [
   { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território, com código único, transcrição e classificação de tipo, sentimento e temperatura.", kind: "wave", img: IMG.registros },
-  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto, localizando sinais no mapa territorial.", kind: "pins" },
-  { n: "03", t: "Registrar", d: "Documentar interações de forma estruturada — participantes, descrição, transcrição e temas.", kind: "form" },
-  { n: "04", t: "Organizar", d: "Compromissos e encontros identificados, organizados por status, comunidade e tema, com atrasos sinalizados.", kind: "grid" },
+  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto, localizando sinais no mapa territorial.", kind: "pins", img: IMG.mapa },
+  { n: "03", t: "Registrar", d: "Documentar interações de forma estruturada — participantes, descrição, transcrição e temas.", kind: "form", img: IMG.registro },
+  { n: "04", t: "Organizar", d: "Compromissos e encontros identificados, organizados por status, comunidade e tema, com atrasos sinalizados.", kind: "grid", img: IMG.organizar },
   { n: "05", t: "Relacionar", d: "Mapear stakeholders — pessoas e entidades — e suas conexões em rede, detectados a partir dos registros.", kind: "net", img: IMG.stakeholders },
   { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território, cruzando dados públicos e fontes secundárias.", kind: "layers", img: IMG.dadosSecundarios },
   { n: "07", t: "Analisar", d: "Comparar indicadores, padrões e relevância dos temas para comunidade e empresa.", kind: "chart", img: IMG.materialidade },
