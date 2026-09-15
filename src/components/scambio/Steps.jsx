@@ -6,27 +6,33 @@ const MUTED = "#5A7775";
 const LIGHT = "#F4F8F6";
 
 const IMG = {
+  escutar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/a7c2f7168_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
   observar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/20f6bc015_15f20d64b_preview-lens-4a4ed909-b130-46cb-94ae-15ef5a28d78f.png",
   registrar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/ed694d05a_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
+  relacionar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/06b9f7132_787b3334d_preview-lens-56699cfd-992d-46ad-be01-0b16b226c1f3.png",
   contextualizar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/3a084ff9f_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png",
   analisar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/534587245_2027f2c5b_preview-lens-625ce2ff-a510-4cf4-84a3-ba50125b1228.png",
+  compreender:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/d3b8b0d3b_92d5380b2_preview-lens-def04ab6-f0d9-44e1-99f5-b2b55db8a11a.png",
   decidir:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/9e97e5f5f_5bf617207_preview-lens-b17e181e-bb92-4f4c-b9f7-9f16b073f9e2.png",
 };
 
 export const STEPS = [
-  { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território.", kind: "wave" },
+  { n: "01", t: "Escutar", d: "Sistema de escuta com código único automático, transcrição de áudio (Whisper), classificação de tipo/sentimento/temperatura e filtros avançados por comunidade, tema e relacionamento. Cada voz do território vira evidência rastreável.", kind: "wave", img: IMG.escutar },
   { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto.", kind: "pins", img: IMG.observar },
   { n: "03", t: "Registrar", d: "Documentar registros de forma estruturada.", kind: "form", img: IMG.registrar },
-  { n: "04", t: "Organizar", d: "Classificar informações em categorias e tags.", kind: "grid" },
-  { n: "05", t: "Relacionar", d: "Conectar atores, organizações e territórios.", kind: "net" },
+  { n: "04", t: "Organizar", d: "Visão organizada de cada interação: título, código (RE-UT-XXXXXX-AAAA), classificação de relacionamento (Comunitário/Institucional) com confiança da IA, participantes, descrição, transcrição, temas e ações. Avaliação de qualidade e auditoria garantem a confiabilidade dos dados.", kind: "grid" },
+  { n: "05", t: "Relacionar", d: "Base de 188 stakeholders mapeados, com segmentação entre pessoas (177) e entidades (11), filtros por comunidade/status/papel e mapa de rede. Stakeholders são detectados automaticamente quando mencionados nos registros.", kind: "net", img: IMG.relacionar },
   { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território.", kind: "layers", img: IMG.contextualizar },
   { n: "07", t: "Analisar", d: "Comparar indicadores e visualizar padrões.", kind: "chart", img: IMG.analisar },
-  { n: "08", t: "Compreender", d: "Sintetizar descobertas em conhecimento.", kind: "report" },
+  { n: "08", t: "Compreender", d: "Síntese da inteligência territorial em relatórios alinhados a GRI, Pacto Global, ODS e CSRD/ESRS. Define escopo (território, comunidade ou plataforma), período e compila registros, dados secundários e devolutivas em evidências reportáveis.", kind: "report", img: IMG.compreender },
   { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências.", kind: "board", img: IMG.decidir },
 ];
 
