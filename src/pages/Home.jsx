@@ -9,6 +9,7 @@ import NaturalLanguage from "@/components/scambio/NaturalLanguage";
 import Memory from "@/components/scambio/Memory";
 import Dashboards from "@/components/scambio/Dashboards";
 import Reports from "@/components/scambio/Reports";
+import EsgReports from "@/components/scambio/EsgReports";
 import Availability from "@/components/scambio/Availability";
 import PlatformShowcase from "@/components/scambio/PlatformShowcase";
 import FinalCta from "@/components/scambio/FinalCta";
@@ -29,6 +30,7 @@ export default function Home() {
         <Memory />
         <Dashboards />
         <Reports />
+        <EsgReports />
         <Availability />
         <PlatformShowcase />
         <FinalCta />
