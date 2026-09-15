@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const LOGO_URL =
-  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/d8f9347a7_ChatGPTImage15desetde202600_05_48.png";
+  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/b53cb8c41_ChatGPTImage15desetde202600_19_24.png";
 
 export default function BrandIntro() {
   const [done, setDone] = useState(false);
@@ -55,7 +55,7 @@ export default function BrandIntro() {
 
       <div
         className="bi-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center"
-        style={{ background: "#FFFFFF" }}
+        style={{ background: "#000000" }}
       >
         <img
           src={LOGO_URL}
@@ -65,13 +65,13 @@ export default function BrandIntro() {
         />
 
         <div className="w-[78vw] max-w-md lg:max-w-lg">
-          <div className="h-[3px] w-full rounded-full bg-[#1E4E59]/10 overflow-hidden">
+          <div className="h-[3px] w-full rounded-full bg-white/10 overflow-hidden">
             <div
               className="bi-bar-fill h-full rounded-full"
-              style={{ background: "linear-gradient(90deg, #1E4E59, #D17C5D)" }}
+              style={{ background: "linear-gradient(90deg, #134D55, #DD8356)" }}
             />
           </div>
-          <div className="mt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.25em] text-[#1E4E59]/70">
+          <div className="mt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.25em] text-white/60">
             <span className="bi-dots">Carregando</span>
             <span>{pct}%</span>
           </div>
