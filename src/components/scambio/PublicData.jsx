@@ -1,8 +1,4 @@
 import SectionHead from "@/components/scambio/SectionHead";
-import ProductShot from "@/components/scambio/ProductShot";
-
-const SHOT =
-  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/d070f9227_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png";
 
 const BODY = [
   "Uma percepção registrada em uma entrevista pode ser analisada junto a indicadores públicos. Uma demanda identificada em uma comunidade pode ser relacionada a informações sobre população, renda, educação, saúde, infraestrutura, mobilidade, meio ambiente ou atividade econômica.",
@@ -31,12 +27,10 @@ export default function PublicData() {
             </p>
           </div>
         </div>
-        <ProductShot
-          src={SHOT}
-          alt="Tela de Dados Secundários da SCAMBIO.IA"
-          tag="SCAMBIO.IA · Dados Secundários"
-          caption="A coleta prioriza fontes oficiais e respeita o código IBGE como identificador territorial. A incorporação depende das fontes e integrações disponíveis."
-        />
+        <p className="mt-8 text-sm text-muted-foreground border-t border-border pt-6">
+          A coleta prioriza fontes oficiais e respeita o código IBGE como identificador
+          territorial. A incorporação depende das fontes e integrações disponíveis.
+        </p>
       </div>
     </section>
   );

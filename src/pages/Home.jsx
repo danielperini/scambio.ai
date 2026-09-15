@@ -15,6 +15,7 @@ import NaturalLanguage from "@/components/scambio/NaturalLanguage";
 import Memory from "@/components/scambio/Memory";
 import Dashboards from "@/components/scambio/Dashboards";
 import Reports from "@/components/scambio/Reports";
+import PlatformShowcase from "@/components/scambio/PlatformShowcase";
 import Modules from "@/components/scambio/Modules";
 import Flow from "@/components/scambio/Flow";
 import Audience from "@/components/scambio/Audience";
@@ -44,6 +45,7 @@ export default function Home() {
         <Dashboards />
         <Reports />
         <Modules />
+        <PlatformShowcase />
         <Flow />
         <Audience />
         <Positioning />
