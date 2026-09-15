@@ -1,21 +1,11 @@
-import { useEffect, useRef } from "react";
-
 export default function Hero() {
-  const svgRef = useRef(null);
-  useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      try { svg.pauseAnimations && svg.pauseAnimations(); } catch {}
-    }
-  }, []);
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden topo-bg pt-16">
       <div className="pointer-events-none absolute left-[18%] top-0 bottom-0 w-px data-stream opacity-40" />
       <div className="pointer-events-none absolute right-[22%] top-0 bottom-0 w-px data-stream opacity-30" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32 w-full">
+        <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground mb-6 select-none">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             Conhecimento Social e Territorial
@@ -27,54 +17,15 @@ export default function Hero() {
             <span className="text-primary">para apoiar decisões.</span>
           </h1>
 
-          <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl">
+          <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             A SCAMBIO.IA organiza informações produzidas no relacionamento com
             comunidades, pessoas, organizações e territórios, conectando diferentes
             fontes de conhecimento para apoiar análise, acompanhamento e tomada de decisão.
           </p>
 
-          <p className="mt-5 text-sm uppercase tracking-[0.2em] text-foreground/70 font-medium">
+          <div className="mt-8 flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-foreground/70 font-medium select-none">
+            <span className="h-px w-10 bg-primary/50" />
             Escuta, observação, relacionamento e compreensão.
-          </p>
-        </div>
-
-        <div className="lg:col-span-5 relative hidden lg:block">
-          <div className="relative aspect-square glass rounded-3xl overflow-hidden glow-ring">
-            <svg ref={svgRef} viewBox="0 0 400 400" className="absolute inset-0 w-full h-full">
-              <defs>
-                <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#C9795C" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#C9795C" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-              {Array.from({ length: 14 }).map((_, i) => (
-                <circle
-                  key={i}
-                  cx="200"
-                  cy="200"
-                  r={20 + i * 14}
-                  fill="none"
-                  stroke="url(#tg)"
-                  strokeWidth="1"
-                  opacity={0.9 - i * 0.05}
-                />
-              ))}
-              {[
-                [120, 140], [270, 110], [220, 250], [300, 280], [150, 300], [90, 220],
-              ].map(([x, y], i) => (
-                <g key={i}>
-                  <circle cx={x} cy={y} r="4" fill="#C9795C" />
-                  <circle cx={x} cy={y} r="10" fill="none" stroke="#C9795C" strokeOpacity="0.4">
-                    <animate attributeName="r" values="6;16;6" dur="3s" begin={`${i * 0.4}s`} repeatCount="indefinite" />
-                    <animate attributeName="stroke-opacity" values="0.5;0;0.5" dur="3s" begin={`${i * 0.4}s`} repeatCount="indefinite" />
-                  </circle>
-                </g>
-              ))}
-            </svg>
-            <div className="absolute bottom-5 left-5 right-5 glass rounded-xl px-4 py-3 text-sm select-none">
-              <p className="text-muted-foreground">Pontos de demanda ativos</p>
-              <p className="font-heading font-bold text-foreground">Mapa territorial em tempo real</p>
-            </div>
           </div>
         </div>
       </div>
