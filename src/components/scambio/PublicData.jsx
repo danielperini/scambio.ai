@@ -1,10 +1,12 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
+import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function PublicData() {
   return (
     <ReflectiveBlock
       id="campo-e-dados"
       tag="Campo e dados"
+      illustration={<EditorialIllustration kind="campo" />}
       title="O campo encontra outras informações"
       paragraphs={[
         "Nenhum território se explica por uma única fonte.",

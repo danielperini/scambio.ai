@@ -1,10 +1,12 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
+import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function Availability() {
   return (
     <ReflectiveBlock
       id="disponibilidade"
       tag="Disponibilidade"
+      illustration={<EditorialIllustration kind="disponibilidade" />}
       title="A plataforma acompanha a equipe onde ela estiver"
       paragraphs={[
         "A SCAMBIO.IA estará disponível para diferentes dispositivos — celular, tablet e computador.",

@@ -1,10 +1,12 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
+import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function Comparative() {
   return (
     <ReflectiveBlock
       id="comparacao"
       tag="Comparação"
+      illustration={<EditorialIllustration kind="comparacao" />}
       title="Quando diferentes territórios podem ser comparados"
       paragraphs={[
         "Conhecer um território também permite perceber diferenças entre territórios.",

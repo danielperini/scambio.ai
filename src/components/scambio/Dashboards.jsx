@@ -1,10 +1,12 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
+import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function Dashboards() {
   return (
     <ReflectiveBlock
       id="decisao"
       tag="Decisão"
+      illustration={<EditorialIllustration kind="decisao" />}
       title="Da informação à decisão"
       subtitle="Conhecimento territorial é contexto."
       paragraphs={[

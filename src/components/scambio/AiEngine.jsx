@@ -1,10 +1,12 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
+import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function AiEngine() {
   return (
     <ReflectiveBlock
       id="tecnologia"
       tag="Tecnologia"
+      illustration={<EditorialIllustration kind="tecnologia" />}
       title="A tecnologia a serviço da escuta"
       subtitle="Mais tempo para compreender. Menos tempo procurando informação."
       paragraphs={[
