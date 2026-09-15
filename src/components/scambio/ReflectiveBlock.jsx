@@ -10,7 +10,7 @@ export default function ReflectiveBlock({
 }) {
   return (
     <section id={id} className="relative py-20 lg:py-28 border-t border-border/40">
-      <div className="max-w-3xl mx-auto px-6 lg:px-10">
+      <div className="max-w-3xl px-6 lg:px-10">
         {tag && (
           <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary mb-5">
             <span className="w-6 h-px bg-primary" />
