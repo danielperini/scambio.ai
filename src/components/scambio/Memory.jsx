@@ -1,12 +1,10 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
-import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function Memory() {
   return (
     <ReflectiveBlock
       id="memoria"
       tag="Memória"
-      illustration={<EditorialIllustration kind="memoria" />}
       title="Uma memória do relacionamento"
       paragraphs={[
         "O que uma equipe aprende não precisa se perder.",

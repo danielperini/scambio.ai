@@ -1,12 +1,10 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
-import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function NaturalLanguage() {
   return (
     <ReflectiveBlock
       id="consulta"
       tag="Consulta"
-      illustration={<EditorialIllustration kind="consulta" />}
       title="Pergunte sobre o território"
       paragraphs={[
         "O conhecimento também pode ser consultado.",

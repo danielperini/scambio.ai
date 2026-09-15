@@ -1,12 +1,10 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
-import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function Reports() {
   return (
     <ReflectiveBlock
       id="relatorios"
       tag="Relatórios"
-      illustration={<EditorialIllustration kind="relatorios" />}
       title="Relatórios adaptados a diferentes finalidades"
       paragraphs={[
         "As informações organizadas no território podem ser estruturadas em relatórios adaptados a diferentes propósitos.",

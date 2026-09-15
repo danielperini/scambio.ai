@@ -1,12 +1,10 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
-import EditorialIllustration from "@/components/scambio/EditorialIllustration";
 
 export default function EsgReports() {
   return (
     <ReflectiveBlock
       id="esg-gri"
       tag="Conformidade"
-      illustration={<EditorialIllustration kind="conformidade" />}
       title="Relatórios automáticos para normas ESG e GRI"
       paragraphs={[
         "A SCAMBIO.IA gera relatórios automáticos a partir das informações já registradas no território, adaptados a normas reconhecidas como ESG e GRI.",
