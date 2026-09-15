@@ -6,36 +6,30 @@ const MUTED = "#5A7775";
 const LIGHT = "#F4F8F6";
 
 const IMG = {
-  escutar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/a7c2f7168_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
-  observar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/20f6bc015_15f20d64b_preview-lens-4a4ed909-b130-46cb-94ae-15ef5a28d78f.png",
-  registrar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/ed694d05a_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
-  relacionar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/06b9f7132_787b3334d_preview-lens-56699cfd-992d-46ad-be01-0b16b226c1f3.png",
-  organizar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/f6ec655b7_5e4f1ec63_preview-lens-99bf9daa-04c9-42c8-9de5-7addd9d696e9.png",
-  contextualizar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/3a084ff9f_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png",
-  analisar:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/534587245_2027f2c5b_preview-lens-625ce2ff-a510-4cf4-84a3-ba50125b1228.png",
-  compreender:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/d3b8b0d3b_92d5380b2_preview-lens-def04ab6-f0d9-44e1-99f5-b2b55db8a11a.png",
-  decidir:
-    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/9e97e5f5f_5bf617207_preview-lens-b17e181e-bb92-4f4c-b9f7-9f16b073f9e2.png",
+  registros:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/b2e2e0eaa_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
+  stakeholders:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/53cde40d0_3490c87a9_preview-lens-c4f989b5-13fd-4395-8898-42f29e193bc0.png",
+  dadosSecundarios:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/60b7dc7c5_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png",
+  materialidade:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/e3162f3fb_aa1a5ebcb_preview-lens-a248cab4-6435-4b8b-8dfb-f74769af4d38.png",
+  ods:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/bd8bb065f_b842ee917_preview-lens-de96ea78-ec3f-4cfa-afac-63b9cd725da8.png",
+  referenciais:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/0a58d2a2a_cbf5389a9_preview-lens-0c0d5c72-0bd2-486a-b622-08e30bb65c72.png",
 };
 
 export const STEPS = [
-  { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território, com código único, transcrição e classificação de tipo, sentimento e temperatura.", kind: "wave" },
+  { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território, com código único, transcrição e classificação de tipo, sentimento e temperatura.", kind: "wave", img: IMG.registros },
   { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto, localizando sinais no mapa territorial.", kind: "pins" },
   { n: "03", t: "Registrar", d: "Documentar interações de forma estruturada — participantes, descrição, transcrição e temas.", kind: "form" },
   { n: "04", t: "Organizar", d: "Compromissos e encontros identificados, organizados por status, comunidade e tema, com atrasos sinalizados.", kind: "grid" },
-  { n: "05", t: "Relacionar", d: "Mapear stakeholders — pessoas e entidades — e suas conexões em rede, detectados a partir dos registros.", kind: "net" },
-  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território, cruzando dados públicos e fontes secundárias.", kind: "layers" },
-  { n: "07", t: "Analisar", d: "Comparar indicadores, padrões e relevância dos temas para comunidade e empresa.", kind: "chart" },
-  { n: "08", t: "Compreender", d: "Sintetizar a inteligência territorial em relatórios alinhados a GRI, Pacto Global, ODS e CSRD/ESRS.", kind: "report" },
-  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências organizadas e visões de campo e coordenação.", kind: "board" },
+  { n: "05", t: "Relacionar", d: "Mapear stakeholders — pessoas e entidades — e suas conexões em rede, detectados a partir dos registros.", kind: "net", img: IMG.stakeholders },
+  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território, cruzando dados públicos e fontes secundárias.", kind: "layers", img: IMG.dadosSecundarios },
+  { n: "07", t: "Analisar", d: "Comparar indicadores, padrões e relevância dos temas para comunidade e empresa.", kind: "chart", img: IMG.materialidade },
+  { n: "08", t: "Compreender", d: "Sintetizar a inteligência territorial em relatórios alinhados a GRI, Pacto Global, ODS e CSRD/ESRS.", kind: "report", img: IMG.ods },
+  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências organizadas e visões de campo e coordenação.", kind: "board", img: IMG.referenciais },
 ];
 
 function Screen({ kind, img }) {
