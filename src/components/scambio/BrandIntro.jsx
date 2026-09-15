@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const LOGO_URL =
-  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/b53cb8c41_ChatGPTImage15desetde202600_19_24.png";
+  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/efe40e33f_ChatGPTImage15desetde202600_05_48.png";
 
 export default function BrandIntro() {
   const [done, setDone] = useState(false);
@@ -55,23 +55,23 @@ export default function BrandIntro() {
 
       <div
         className="bi-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center"
-        style={{ background: "#000000" }}
+        style={{ background: "#FFFFFF" }}
       >
         <img
           src={LOGO_URL}
           alt="Scambio.ai — Conhecimento Social e Territorial"
-          className="bi-logo w-[78vw] max-w-md lg:max-w-lg h-auto select-none mb-10"
+          className="bi-logo w-[86vw] max-w-2xl lg:max-w-3xl h-auto select-none mb-10"
           draggable="false"
         />
 
-        <div className="w-[78vw] max-w-md lg:max-w-lg">
-          <div className="h-[3px] w-full rounded-full bg-white/10 overflow-hidden">
+        <div className="w-[86vw] max-w-2xl lg:max-w-3xl">
+          <div className="h-[3px] w-full rounded-full bg-[#1A4850]/10 overflow-hidden">
             <div
               className="bi-bar-fill h-full rounded-full"
-              style={{ background: "linear-gradient(90deg, #134D55, #DD8356)" }}
+              style={{ background: "linear-gradient(90deg, #1A4850, #CC7A5C)" }}
             />
           </div>
-          <div className="mt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.25em] text-white/60">
+          <div className="mt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.25em] text-[#1A4850]/70">
             <span className="bi-dots">Carregando</span>
             <span>{pct}%</span>
           </div>
