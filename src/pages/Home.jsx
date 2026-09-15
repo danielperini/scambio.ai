@@ -35,8 +35,8 @@ export default function Home() {
           <Reports />
           <EsgReports />
           <Availability />
-          <PlatformShowcase />
           <FinalCta />
+          <PlatformShowcase />
         </Suspense>
       </main>
       <Suspense fallback={null}>
