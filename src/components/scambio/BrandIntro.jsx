@@ -18,7 +18,10 @@ export default function BrandIntro() {
       if (p < 100) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
-    const t = setTimeout(() => setDone(true), 4200);
+    const t = setTimeout(() => {
+      document.body.style.overflow = "";
+      setDone(true);
+    }, 4200);
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(t);
