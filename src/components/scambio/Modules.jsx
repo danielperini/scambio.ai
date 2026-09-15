@@ -33,6 +33,11 @@ const MODULES = [
   },
 ];
 
+const TEAL = "#1E4E5A";
+const TERRA = "#C9795C";
+const MUTED = "#5A7775";
+const LIGHT = "#F4F8F6";
+
 function Visual({ kind }) {
   if (kind === "wave") {
     return (
@@ -42,16 +47,16 @@ function Visual({ kind }) {
             key={i}
             d={`M0 ${100 + i * 8} Q75 ${60 - i * 10 + 100}, 150 ${100 + i * 8} T300 ${100 + i * 8}`}
             fill="none"
-            stroke="#2D5BFF"
+            stroke={TERRA}
             strokeOpacity={0.8 - i * 0.12}
             strokeWidth="1.5"
           />
         ))}
         {["Escuta", "Registro", "Tag", "Insight"].map((t, i) => (
-          <rect key={t} x={40 + i * 60} y="160" width="52" height="20" rx="4" fill="#161D2F" stroke="#2D5BFF" strokeOpacity="0.4" />
+          <rect key={t} x={40 + i * 60} y="160" width="52" height="20" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
         ))}
         {["Escuta", "Registro", "Tag", "Insight"].map((t, i) => (
-          <text key={t} x={66 + i * 60} y="173" fontSize="9" fill="#94A3B8" textAnchor="middle">{t}</text>
+          <text key={t} x={66 + i * 60} y="173" fontSize="9" fill={MUTED} textAnchor="middle">{t}</text>
         ))}
       </svg>
     );
@@ -59,14 +64,14 @@ function Visual({ kind }) {
   if (kind === "map") {
     return (
       <svg viewBox="0 0 300 200" className="w-full h-full">
-        <rect width="300" height="200" fill="#0A0F1E" />
+        <rect width="300" height="200" fill={LIGHT} />
         {Array.from({ length: 8 }).map((_, i) => (
-          <circle key={i} cx="150" cy="100" r={20 + i * 12} fill="#2D5BFF" opacity={0.06} />
+          <circle key={i} cx="150" cy="100" r={20 + i * 12} fill={TERRA} opacity={0.08} />
         ))}
         {[[90, 70], [200, 60], [150, 130], [240, 140], [70, 150]].map(([x, y], i) => (
           <g key={i}>
-            <circle cx={x} cy={y} r="5" fill="#2D5BFF" />
-            <circle cx={x} cy={y} r="12" fill="none" stroke="#2D5BFF" strokeOpacity="0.4">
+            <circle cx={x} cy={y} r="5" fill={TERRA} />
+            <circle cx={x} cy={y} r="12" fill="none" stroke={TERRA} strokeOpacity="0.4">
               <animate attributeName="r" values="6;18;6" dur="3.5s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
             </circle>
           </g>
@@ -78,23 +83,23 @@ function Visual({ kind }) {
     return (
       <svg viewBox="0 0 300 200" className="w-full h-full">
         {[[150, 40], [60, 100], [240, 100], [100, 160], [200, 160], [150, 100]].map((p, i) => (
-          <line key={i} x1="150" y1="100" x2={p[0]} y2={p[1]} stroke="#2D5BFF" strokeOpacity="0.3" />
+          <line key={i} x1="150" y1="100" x2={p[0]} y2={p[1]} stroke={TERRA} strokeOpacity="0.3" />
         ))}
-        {[ [150, 40], [60, 100], [240, 100], [100, 160], [200, 160], [150, 100]].map((p, i) => (
-          <circle key={i} cx={p[0]} cy={p[1]} r="7" fill={i === 5 ? "#2D5BFF" : "#161D2F"} stroke="#2D5BFF" />
+        {[[150, 40], [60, 100], [240, 100], [100, 160], [200, 160], [150, 100]].map((p, i) => (
+          <circle key={i} cx={p[0]} cy={p[1]} r="7" fill={i === 5 ? TERRA : LIGHT} stroke={TEAL} />
         ))}
       </svg>
     );
   }
   return (
     <svg viewBox="0 0 300 200" className="w-full h-full">
-      <rect x="30" y="30" width="240" height="22" rx="4" fill="#2D5BFF" opacity="0.3" />
-      <rect x="30" y="62" width="180" height="10" rx="2" fill="#94A3B8" opacity="0.3" />
-      <rect x="30" y="80" width="210" height="10" rx="2" fill="#94A3B8" opacity="0.25" />
-      <rect x="30" y="110" width="110" height="60" rx="4" fill="#161D2F" stroke="#2D5BFF" strokeOpacity="0.4" />
-      <rect x="160" y="110" width="110" height="60" rx="4" fill="#161D2F" stroke="#2D5BFF" strokeOpacity="0.4" />
-      <text x="85" y="145" fontSize="11" fill="#F8FAFC" textAnchor="middle">ESG</text>
-      <text x="215" y="145" fontSize="11" fill="#F8FAFC" textAnchor="middle">ROI</text>
+      <rect x="30" y="30" width="240" height="22" rx="4" fill={TERRA} opacity="0.35" />
+      <rect x="30" y="62" width="180" height="10" rx="2" fill={MUTED} opacity="0.3" />
+      <rect x="30" y="80" width="210" height="10" rx="2" fill={MUTED} opacity="0.25" />
+      <rect x="30" y="110" width="110" height="60" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
+      <rect x="160" y="110" width="110" height="60" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
+      <text x="85" y="145" fontSize="11" fill={TEAL} textAnchor="middle">ESG</text>
+      <text x="215" y="145" fontSize="11" fill={TEAL} textAnchor="middle">ROI</text>
     </svg>
   );
 }
@@ -114,7 +119,7 @@ export default function Modules() {
         </div>
 
         <div className="space-y-4">
-          {MODULES.map((m, i) => (
+          {MODULES.map((m) => (
             <article
               key={m.id}
               className="group glass rounded-2xl p-6 lg:p-10 grid lg:grid-cols-12 gap-8 items-center hover:border-primary/40 transition-colors"

@@ -4,57 +4,35 @@
 
 @layer base {
   :root {
-    --background: 226 47% 7%;
-    --foreground: 213 32% 98%;
-    --card: 225 41% 12%;
-    --card-foreground: 213 32% 98%;
-    --popover: 225 41% 12%;
-    --popover-foreground: 213 32% 98%;
-    --primary: 224 100% 59%;
+    --background: 0 0% 100%;
+    --foreground: 192 50% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 192 50% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 192 50% 23%;
+    --primary: 16 50% 57%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 225 35% 16%;
-    --secondary-foreground: 213 32% 98%;
-    --muted: 225 30% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 224 100% 59%;
+    --secondary: 165 22% 94%;
+    --secondary-foreground: 192 50% 23%;
+    --muted: 165 18% 93%;
+    --muted-foreground: 190 18% 40%;
+    --accent: 16 50% 57%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 225 30% 20%;
-    --input: 225 30% 22%;
-    --ring: 224 100% 59%;
-    --chart-1: 224 100% 59%;
-    --chart-2: 190 90% 50%;
-    --chart-3: 262 83% 58%;
+    --border: 170 18% 89%;
+    --input: 170 18% 89%;
+    --ring: 16 50% 57%;
+    --chart-1: 16 50% 57%;
+    --chart-2: 192 50% 40%;
+    --chart-3: 190 30% 45%;
     --chart-4: 43 96% 64%;
-    --chart-5: 330 82% 62%;
+    --chart-5: 330 60% 55%;
     --radius: 0.75rem;
     --font-heading: "Satoshi", ui-sans-serif, system-ui, sans-serif;
     --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  }
-
-  .dark {
-    --background: 226 47% 7%;
-    --foreground: 213 32% 98%;
-    --card: 225 41% 12%;
-    --card-foreground: 213 32% 98%;
-    --popover: 225 41% 12%;
-    --popover-foreground: 213 32% 98%;
-    --primary: 224 100% 59%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 225 35% 16%;
-    --secondary-foreground: 213 32% 98%;
-    --muted: 225 30% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 224 100% 59%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 225 30% 20%;
-    --input: 225 30% 22%;
-    --ring: 224 100% 59%;
   }
 }
 
@@ -80,21 +58,21 @@
     text-wrap: balance;
   }
   .glass {
-    background: rgba(22, 29, 47, 0.55);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(45, 91, 255, 0.18);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(30, 78, 90, 0.14);
   }
   .glow-ring {
-    box-shadow: 0 0 0 1px rgba(45, 91, 255, 0.4), 0 0 40px rgba(45, 91, 255, 0.25);
+    box-shadow: 0 0 0 1px rgba(201, 121, 92, 0.25), 0 12px 36px rgba(201, 121, 92, 0.18);
   }
   .topo-bg {
     background-image:
-      radial-gradient(circle at 20% 20%, rgba(45, 91, 255, 0.12), transparent 40%),
-      radial-gradient(circle at 80% 60%, rgba(45, 91, 255, 0.08), transparent 45%),
-      repeating-radial-gradient(circle at 50% 50%, rgba(148, 163, 184, 0.05) 0, rgba(148, 163, 184, 0.05) 1px, transparent 1px, transparent 38px);
+      radial-gradient(circle at 18% 22%, rgba(201, 121, 92, 0.07), transparent 42%),
+      radial-gradient(circle at 82% 68%, rgba(30, 78, 90, 0.06), transparent 46%),
+      repeating-radial-gradient(circle at 50% 50%, rgba(30, 78, 90, 0.04) 0, rgba(30, 78, 90, 0.04) 1px, transparent 1px, transparent 40px);
   }
   .data-stream {
-    background: linear-gradient(180deg, transparent, rgba(45, 91, 255, 0.6), transparent);
+    background: linear-gradient(180deg, transparent, rgba(201, 121, 92, 0.5), transparent);
   }
 }
