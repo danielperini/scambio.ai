@@ -26,16 +26,6 @@ export default function Hero() {
           <p className="mt-5 text-sm uppercase tracking-[0.2em] text-foreground/70 font-medium">
             Escuta, observação, relacionamento e compreensão.
           </p>
-
-          <div className="mt-9 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#como-funciona"
-              className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3.5 rounded-xl transition-colors glow-ring"
-            >
-              Conheça a plataforma
-            </a>
-          </div>
-
         </div>
 
         <div className="lg:col-span-5 relative hidden lg:block">
