@@ -57,7 +57,7 @@ export default function Modules() {
   return (
     <section id="como-funciona" className="relative py-24 lg:py-32 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16 lg:mb-20">
+        <div className="max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary font-medium text-sm">Como funciona</span>
           <h2 className="font-heading font-black text-3xl lg:text-5xl mt-3 leading-[1.1] tracking-tight text-balance">
             Quatro dimensões para conhecer melhor o território
@@ -92,7 +92,7 @@ export default function Modules() {
               key={m.id}
               className="group glass rounded-2xl p-6 lg:p-10 hover:border-primary/40 transition-colors"
             >
-              <div className="max-w-3xl">
+              <div className="max-w-3xl mx-auto">
                 <span className="text-sm font-mono text-primary">{m.tag}</span>
                 <h3 className="mt-3 font-heading font-bold text-2xl lg:text-3xl leading-tight text-balance">
                   {m.title}

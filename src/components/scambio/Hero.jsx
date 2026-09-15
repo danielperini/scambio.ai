@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute right-[22%] top-0 bottom-0 w-px data-stream opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32 w-full">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground mb-6 select-none">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             Conhecimento Social e Territorial
