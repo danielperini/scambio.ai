@@ -2,6 +2,7 @@ import BrandIntro from "@/components/scambio/BrandIntro";
 import Navbar from "@/components/scambio/Navbar";
 import Hero from "@/components/scambio/Hero";
 import Knowledge from "@/components/scambio/Knowledge";
+import Listen from "@/components/scambio/Listen";
 import Capture from "@/components/scambio/Capture";
 import Modules from "@/components/scambio/Modules";
 import AiEngine from "@/components/scambio/AiEngine";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <Knowledge />
+        <Listen />
         <Capture />
         <Modules />
         <AiEngine />
