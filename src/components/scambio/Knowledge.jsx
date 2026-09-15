@@ -91,6 +91,11 @@ export default function Knowledge() {
             acontecimentos, documentos e evidências podem ser relacionados e
             analisados dentro de seu contexto.
           </p>
+          <p className="mt-5 text-muted-foreground leading-relaxed">
+            A plataforma também organiza evidências e relatórios, constrói mapas
+            dinâmicos de stakeholders — institucionais, empresariais e
+            comunitários — e reúne os estudos realizados no território.
+          </p>
           <p className="mt-6 font-heading font-semibold text-lg text-foreground">
             Porque compreender o território é compreender como as coisas se
             relacionam. E relacionamento é conhecimento.
