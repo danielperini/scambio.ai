@@ -12,9 +12,9 @@ export default function Hero() {
           </span>
 
           <h1 className="font-heading font-black text-[44px] sm:text-6xl lg:text-[76px] leading-[1.05] tracking-tight text-balance">
-            Inteligência Territorial,
+            Conhecimento territorial
             <br />
-            <span className="text-primary">amplificada.</span>
+            <span className="text-primary">ampliado</span>
           </h1>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl">
