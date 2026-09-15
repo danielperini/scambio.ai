@@ -27,15 +27,15 @@ const IMG = {
 };
 
 export const STEPS = [
-  { n: "01", t: "Escutar", d: "Sistema de escuta com código único automático, transcrição de áudio (Whisper), classificação de tipo/sentimento/temperatura e filtros avançados por comunidade, tema e relacionamento. Cada voz do território vira evidência rastreável.", kind: "wave", img: IMG.escutar },
-  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto.", kind: "pins", img: IMG.observar },
-  { n: "03", t: "Registrar", d: "Documentar registros de forma estruturada.", kind: "form", img: IMG.registrar },
-  { n: "04", t: "Organizar", d: "Agenda inteligente com compromissos e encontros identificados, organizados por status (prevista, confirmada, acordada, realizada) e por comunidade e tema. Atrasos são sinalizados com prazo, responsável e localidade, conectando cada ação ao território e ao relacionamento.", kind: "grid", img: IMG.organizar },
-  { n: "05", t: "Relacionar", d: "Base de 188 stakeholders mapeados, com segmentação entre pessoas (177) e entidades (11), filtros por comunidade/status/papel e mapa de rede. Stakeholders são detectados automaticamente quando mencionados nos registros.", kind: "net", img: IMG.relacionar },
-  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território.", kind: "layers", img: IMG.contextualizar },
-  { n: "07", t: "Analisar", d: "Comparar indicadores e visualizar padrões.", kind: "chart", img: IMG.analisar },
-  { n: "08", t: "Compreender", d: "Síntese da inteligência territorial em relatórios alinhados a GRI, Pacto Global, ODS e CSRD/ESRS. Define escopo (território, comunidade ou plataforma), período e compila registros, dados secundários e devolutivas em evidências reportáveis.", kind: "report", img: IMG.compreender },
-  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências.", kind: "board", img: IMG.decidir },
+  { n: "01", t: "Escutar", d: "Captar vozes, falas e demandas do território, com código único, transcrição e classificação de tipo, sentimento e temperatura.", kind: "wave" },
+  { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto, localizando sinais no mapa territorial.", kind: "pins" },
+  { n: "03", t: "Registrar", d: "Documentar interações de forma estruturada — participantes, descrição, transcrição e temas.", kind: "form" },
+  { n: "04", t: "Organizar", d: "Compromissos e encontros identificados, organizados por status, comunidade e tema, com atrasos sinalizados.", kind: "grid" },
+  { n: "05", t: "Relacionar", d: "Mapear stakeholders — pessoas e entidades — e suas conexões em rede, detectados a partir dos registros.", kind: "net" },
+  { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território, cruzando dados públicos e fontes secundárias.", kind: "layers" },
+  { n: "07", t: "Analisar", d: "Comparar indicadores, padrões e relevância dos temas para comunidade e empresa.", kind: "chart" },
+  { n: "08", t: "Compreender", d: "Sintetizar a inteligência territorial em relatórios alinhados a GRI, Pacto Global, ODS e CSRD/ESRS.", kind: "report" },
+  { n: "09", t: "Decidir", d: "Apoiar a tomada de decisão com evidências organizadas e visões de campo e coordenação.", kind: "board" },
 ];
 
 function Screen({ kind, img }) {
