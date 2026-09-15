@@ -14,6 +14,8 @@ const IMG = {
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/ed694d05a_cae3d2167_preview-lens-d70dff1d-0e8d-4b51-b55d-00cb87ae86c0.png",
   relacionar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/06b9f7132_787b3334d_preview-lens-56699cfd-992d-46ad-be01-0b16b226c1f3.png",
+  organizar:
+    "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/f6ec655b7_5e4f1ec63_preview-lens-99bf9daa-04c9-42c8-9de5-7addd9d696e9.png",
   contextualizar:
     "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/3a084ff9f_234706ab4_preview-lens-8382cf32-18b5-4184-950a-c2bb7418a834.png",
   analisar:
@@ -28,7 +30,7 @@ export const STEPS = [
   { n: "01", t: "Escutar", d: "Sistema de escuta com código único automático, transcrição de áudio (Whisper), classificação de tipo/sentimento/temperatura e filtros avançados por comunidade, tema e relacionamento. Cada voz do território vira evidência rastreável.", kind: "wave", img: IMG.escutar },
   { n: "02", t: "Observar", d: "Perceber o que acontece no campo e no contexto.", kind: "pins", img: IMG.observar },
   { n: "03", t: "Registrar", d: "Documentar registros de forma estruturada.", kind: "form", img: IMG.registrar },
-  { n: "04", t: "Organizar", d: "Visão organizada de cada interação: título, código (RE-UT-XXXXXX-AAAA), classificação de relacionamento (Comunitário/Institucional) com confiança da IA, participantes, descrição, transcrição, temas e ações. Avaliação de qualidade e auditoria garantem a confiabilidade dos dados.", kind: "grid" },
+  { n: "04", t: "Organizar", d: "Agenda inteligente com compromissos e encontros identificados, organizados por status (prevista, confirmada, acordada, realizada) e por comunidade e tema. Atrasos são sinalizados com prazo, responsável e localidade, conectando cada ação ao território e ao relacionamento.", kind: "grid", img: IMG.organizar },
   { n: "05", t: "Relacionar", d: "Base de 188 stakeholders mapeados, com segmentação entre pessoas (177) e entidades (11), filtros por comunidade/status/papel e mapa de rede. Stakeholders são detectados automaticamente quando mencionados nos registros.", kind: "net", img: IMG.relacionar },
   { n: "06", t: "Contextualizar", d: "Camadas de contexto sobre o território.", kind: "layers", img: IMG.contextualizar },
   { n: "07", t: "Analisar", d: "Comparar indicadores e visualizar padrões.", kind: "chart", img: IMG.analisar },
