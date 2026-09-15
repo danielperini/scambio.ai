@@ -1,24 +1,10 @@
 import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
-import { Image } from "@/components/ui/image";
-
-const ILUSTRA =
-  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/de142574e_ChatGPTImage15desetde202601_47_22.png";
 
 export default function PublicData() {
   return (
     <ReflectiveBlock
       id="campo-e-dados"
       tag="Campo e dados"
-      illustration={
-        <div className="aspect-[16/10] rounded-2xl overflow-hidden">
-          <Image
-            src={ILUSTRA}
-            alt="O campo encontra outras informações"
-            className="w-full h-full"
-            fittingType="fit"
-          />
-        </div>
-      }
       title="O campo encontra outras informações"
       paragraphs={[
         "Nenhum território se explica por uma única fonte.",
