@@ -36,23 +36,34 @@ const LIGHT = "#F4F8F6";
 
 function Visual({ kind }) {
   if (kind === "wave") {
+    const srcs = [[70, 60], [230, 55], [250, 110], [60, 120], [150, 45]];
     return (
       <svg viewBox="0 0 300 200" className="w-full h-full">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <path
-            key={i}
-            d={`M0 ${100 + i * 8} Q75 ${60 - i * 10 + 100}, 150 ${100 + i * 8} T300 ${100 + i * 8}`}
-            fill="none"
-            stroke={TERRA}
-            strokeOpacity={0.8 - i * 0.12}
-            strokeWidth="1.5"
-          />
+        <rect width="300" height="200" fill={LIGHT} />
+        {/* concentric listening ripples */}
+        {Array.from({ length: 6 }).map((_, i) => (
+          <circle key={i} cx="150" cy="105" r={14 + i * 13} fill="none" stroke={TERRA} strokeOpacity={0.5 - i * 0.07} strokeWidth="1.4">
+            <animate attributeName="r" values={`${14 + i * 13};${22 + i * 13};${14 + i * 13}`} dur="3.6s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" values={`${0.5 - i * 0.07};0;${0.5 - i * 0.07}`} dur="3.6s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
+          </circle>
         ))}
-        {["Escuta", "Registro", "Contexto"].map((t, i) => (
-          <rect key={t} x={55 + i * 70} y="160" width="60" height="20" rx="4" fill={LIGHT} stroke={TEAL} strokeOpacity="0.4" />
+        {/* source nodes around */}
+        {srcs.map(([x, y], i) => (
+          <g key={i}>
+            <line x1="150" y1="105" x2={x} y2={y} stroke={TEAL} strokeOpacity="0.25" strokeWidth="1" strokeDasharray="3 3" />
+            <rect x={x - 12} y={y - 9} width="24" height="18" rx="4" fill="#fff" stroke={TEAL} strokeOpacity="0.4" />
+            <circle cx={x - 4} cy={y} r="2.5" fill={TERRA} />
+            <rect x={x + 1} y={y - 3} width="9" height="2.5" rx="1" fill={MUTED} opacity="0.35" />
+            <rect x={x + 1} y={y + 1} width="7" height="2.5" rx="1" fill={MUTED} opacity="0.35" />
+          </g>
         ))}
-        {["Escuta", "Registro", "Contexto"].map((t, i) => (
-          <text key={t} x={85 + i * 70} y="173" fontSize="9" fill={MUTED} textAnchor="middle">{t}</text>
+        {/* central listening core */}
+        <circle cx="150" cy="105" r="9" fill={TERRA} />
+        <circle cx="150" cy="105" r="4" fill="#fff" />
+        {/* waveform baseline */}
+        <path d="M30 175 Q60 168 90 175 T150 175 T210 175 T270 175" fill="none" stroke={TEAL} strokeOpacity="0.45" strokeWidth="1.5" />
+        {[90, 150, 210].map((x, i) => (
+          <circle key={i} cx={x} cy="175" r="2.5" fill={TERRA} />
         ))}
       </svg>
     );
