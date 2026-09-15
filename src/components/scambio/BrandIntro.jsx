@@ -1,15 +1,26 @@
 import { useEffect, useState } from "react";
 
 const LOGO_URL =
-  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/8e8969d73_ChatGPTImage15desetde202600_19_24.png";
+  "https://media.base44.com/images/public/6aa8b10af4dead65826fec68/d8f9347a7_ChatGPTImage15desetde202600_05_48.png";
 
 export default function BrandIntro() {
   const [done, setDone] = useState(false);
+  const [pct, setPct] = useState(0);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    const start = performance.now();
+    const dur = 2600;
+    let raf;
+    const tick = (now) => {
+      const p = Math.min(100, ((now - start) / dur) * 100);
+      setPct(Math.round(p));
+      if (p < 100) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
     const t = setTimeout(() => setDone(true), 4200);
     return () => {
+      cancelAnimationFrame(raf);
       clearTimeout(t);
       document.body.style.overflow = "";
     };
@@ -22,34 +33,48 @@ export default function BrandIntro() {
       <style>{`
         @keyframes bi-out { 0%,76% { opacity: 1; } 100% { opacity: 0; } }
         @keyframes bi-logo {
-          0% { opacity: 0; transform: scale(0.9); filter: blur(12px); }
+          0% { opacity: 0; transform: scale(0.92); filter: blur(10px); }
           60% { opacity: 1; filter: blur(0); }
           100% { opacity: 1; transform: scale(1); filter: blur(0); }
         }
-        @keyframes bi-glow {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 0.9; }
+        @keyframes bi-bar {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+        @keyframes bi-dots {
+          0%, 20% { content: ""; }
+          40% { content: "."; }
+          60% { content: ".."; }
+          80%, 100% { content: "..."; }
         }
         .bi-overlay { animation: bi-out 4s ease-in-out 0.2s forwards; }
-        .bi-logo { opacity: 0; animation: bi-logo 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards; }
-        .bi-glow { animation: bi-glow 3s ease-in-out 1.6s infinite; }
+        .bi-logo { opacity: 0; animation: bi-logo 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards; }
+        .bi-bar-fill { animation: bi-bar 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards; }
+        .bi-dots::after { content: ""; animation: bi-dots 1.4s steps(1, end) infinite; }
       `}</style>
 
       <div
-        className="bi-overlay fixed inset-0 z-[100] flex items-center justify-center"
-        style={{ background: "#000000" }}
+        className="bi-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center"
+        style={{ background: "#FFFFFF" }}
       >
-        <div className="relative flex items-center justify-center">
-          <div
-            className="bi-glow absolute inset-0 rounded-full blur-3xl"
-            style={{ background: "radial-gradient(circle, rgba(217,129,84,0.25), transparent 65%)" }}
-          />
-          <img
-            src={LOGO_URL}
-            alt="Scambio.ai — Conhecimento Social e Territorial"
-            className="bi-logo relative w-[78vw] max-w-md lg:max-w-lg h-auto select-none"
-            draggable="false"
-          />
+        <img
+          src={LOGO_URL}
+          alt="Scambio.ai — Conhecimento Social e Territorial"
+          className="bi-logo w-[78vw] max-w-md lg:max-w-lg h-auto select-none mb-10"
+          draggable="false"
+        />
+
+        <div className="w-[78vw] max-w-md lg:max-w-lg">
+          <div className="h-[3px] w-full rounded-full bg-[#1E4E59]/10 overflow-hidden">
+            <div
+              className="bi-bar-fill h-full rounded-full"
+              style={{ background: "linear-gradient(90deg, #1E4E59, #D17C5D)" }}
+            />
+          </div>
+          <div className="mt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.25em] text-[#1E4E59]/70">
+            <span className="bi-dots">Carregando</span>
+            <span>{pct}%</span>
+          </div>
         </div>
       </div>
     </>
