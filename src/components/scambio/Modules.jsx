@@ -16,8 +16,8 @@ const PILARES = [
   {
     id: "evidencias",
     tag: "03 — Evidências & Território",
-    desc: "Relacionar registros, documentos, dados, acontecimentos e informações espaciais.",
-    points: ["Conexão de evidências", "Contexto preservado", "Dimensão espacial"],
+    desc: "Conectar registros, documentos, dados e acontecimentos às suas dimensões espaciais — preservando o contexto de cada evidência e revelando relações que permaneceriam invisíveis quando isoladas.",
+    points: ["Conexão entre evidências", "Contexto preservado", "Dimensão espacial e territorial"],
     visual: "map",
   },
   {
@@ -70,17 +70,32 @@ function Visual({ kind }) {
     );
   }
   if (kind === "map") {
+    const pts = [[80, 60], [210, 50], [250, 120], [180, 160], [60, 140]];
+    const pins = [[110, 85], [175, 75], [150, 120], [220, 110], [90, 130]];
     return (
       <svg viewBox="0 0 300 200" className="w-full h-full">
         <rect width="300" height="200" fill={LIGHT} />
-        {Array.from({ length: 8 }).map((_, i) => (
-          <circle key={i} cx="150" cy="100" r={20 + i * 12} fill={TERRA} opacity={0.08} />
+        {/* territory polygon */}
+        <polygon points={pts.map(p => p.join(",")).join(" ")} fill={TEAL} opacity="0.08" stroke={TEAL} strokeOpacity="0.35" strokeWidth="1.5" />
+        {/* contour rings */}
+        {Array.from({ length: 4 }).map((_, i) => (
+          <circle key={i} cx="150" cy="100" r={26 + i * 16} fill="none" stroke={TERRA} strokeOpacity={0.12 - i * 0.02} strokeWidth="1" />
         ))}
-        {[[90, 70], [200, 60], [150, 130], [240, 140], [70, 150]].map(([x, y], i) => (
+        {/* connecting lines between evidences */}
+        {pins.map((p, i) =>
+          pins.slice(i + 1).map((q, j) => (
+            <line key={`${i}-${j}`} x1={p[0]} y1={p[1]} x2={q[0]} y2={q[1]} stroke={TERRA} strokeOpacity="0.25" strokeWidth="1" strokeDasharray="3 3" />
+          ))
+        )}
+        {/* pins */}
+        {pins.map(([x, y], i) => (
           <g key={i}>
-            <circle cx={x} cy={y} r="5" fill={TERRA} />
-            <circle cx={x} cy={y} r="12" fill="none" stroke={TERRA} strokeOpacity="0.4">
-              <animate attributeName="r" values="6;18;6" dur="3.5s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+            <path d={`M${x} ${y} L${x - 5} ${y + 12} L${x + 5} ${y + 12} Z`} fill={TERRA} />
+            <circle cx={x} cy={y} r="5.5" fill={TERRA} />
+            <circle cx={x} cy={y} r="2.5" fill="#fff" />
+            <circle cx={x} cy={y} r="11" fill="none" stroke={TERRA} strokeOpacity="0.5">
+              <animate attributeName="r" values="6;16;6" dur="3.5s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+              <animate attributeName="stroke-opacity" values="0.5;0;0.5" dur="3.5s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
             </circle>
           </g>
         ))}
