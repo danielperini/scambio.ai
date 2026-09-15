@@ -3,12 +3,12 @@ export default function Footer() {
     <footer className="relative border-t border-border/40 overflow-hidden topo-bg">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-28 text-center">
         <h2 className="font-heading font-black text-3xl lg:text-5xl leading-tight text-balance">
-          Relacionamento, escuta, evidências
+          Escutar. Observar.
           <br />
-          <span className="text-primary">e decisão.</span>
+          <span className="text-primary">Relacionar. Compreender.</span>
         </h2>
         <p className="mt-6 text-muted-foreground text-lg max-w-xl mx-auto">
-          Conhecimento social e territorial para decisões com base em evidências.
+          Conhecimento social e territorial construído pela relação.
         </p>
       </div>
 

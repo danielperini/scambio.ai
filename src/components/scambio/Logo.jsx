@@ -5,7 +5,7 @@ export default function Logo({ className = "" }) {
   return (
     <img
       src={LOGO_URL}
-      alt="Scambio.ai — Escutar. Conectar. Evidenciar. Decidir."
+      alt="Scambio.ai — Escutar. Observar. Relacionar. Compreender."
       className={`h-12 w-auto ${className}`}
       draggable="false"
     />

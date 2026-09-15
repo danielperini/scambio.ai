@@ -1,37 +1,23 @@
-import SectionHead from "@/components/scambio/SectionHead";
-
-const BODY = [
-  "Uma percepção registrada em uma entrevista pode ser analisada junto a indicadores públicos. Uma demanda identificada em uma comunidade pode ser relacionada a informações sobre população, renda, educação, saúde, infraestrutura, mobilidade, meio ambiente ou atividade econômica.",
-  "Essa combinação permite contextualizar aquilo que foi observado no campo.",
-];
+import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
 
 export default function PublicData() {
   return (
-    <section id="dados-publicos" className="relative py-20 lg:py-28 border-t border-border/40">
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
-        <SectionHead title="O conhecimento do campo encontra os dados disponíveis." />
-        <div className="space-y-6 text-muted-foreground leading-relaxed">
-          {BODY.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
-        <div className="mt-8 grid sm:grid-cols-2 gap-4">
-          <div className="rounded-xl border border-border bg-background p-5">
-            <p className="font-heading font-semibold text-foreground">
-              O dado ajuda a dimensionar uma realidade.
-            </p>
-          </div>
-          <div className="rounded-xl border border-border bg-background p-5">
-            <p className="font-heading font-semibold text-foreground">
-              A experiência territorial ajuda a interpretá-la.
-            </p>
-          </div>
-        </div>
-        <p className="mt-8 text-sm text-muted-foreground border-t border-border pt-6">
-          A coleta prioriza fontes oficiais e respeita o código IBGE como identificador
-          territorial. A incorporação depende das fontes e integrações disponíveis.
-        </p>
-      </div>
-    </section>
+    <ReflectiveBlock
+      id="campo-e-dados"
+      tag="Campo e dados"
+      title="O campo encontra outras informações"
+      paragraphs={[
+        "Nenhum território se explica por uma única fonte.",
+        "O conhecimento produzido no campo ganha profundidade quando pode ser relacionado a outras informações.",
+        "Uma percepção de uma comunidade pode ser observada junto a dados demográficos. Uma demanda pode ser relacionada às condições de infraestrutura. Uma mudança percebida pelos moradores pode ser confrontada com informações ambientais, econômicas ou sociais.",
+        "A SCAMBIO.IA permite trabalhar com informações produzidas no relacionamento e também com dados públicos e fontes secundárias.",
+      ]}
+      note="O objetivo não é substituir uma fonte pela outra. É colocá-las em conversa."
+    >
+      <p className="mt-7 text-lg text-muted-foreground leading-relaxed">
+        O dado ajuda a dimensionar. A experiência ajuda a interpretar. O contexto
+        ajuda a compreender.
+      </p>
+    </ReflectiveBlock>
   );
 }

@@ -1,14 +1,18 @@
-import SectionHead from "@/components/scambio/SectionHead";
+import ReflectiveBlock from "@/components/scambio/ReflectiveBlock";
 
 export default function Dashboards() {
   return (
-    <section id="gestao" className="relative py-20 lg:py-28 bg-secondary/30">
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
-        <SectionHead
-          title="Da informação à gestão."
-          subtitle="Informações organizadas podem ser acompanhadas de forma mais clara. Dashboards e indicadores ajudam as equipes a visualizar demandas, interações, temas, compromissos e informações territoriais, permitindo acompanhar sua evolução e identificar aquilo que merece atenção."
-        />
-      </div>
-    </section>
+    <ReflectiveBlock
+      id="decisao"
+      tag="Decisão"
+      title="Da informação à decisão"
+      subtitle="Conhecimento territorial é contexto."
+      paragraphs={[
+        "A SCAMBIO.IA não pretende dizer às equipes o que fazer.",
+        "Seu papel é ajudar a organizar aquilo que elas sabem, aquilo que observaram e aquilo que ainda precisam compreender.",
+        "Ao reunir diferentes fontes, preservar históricos, relacionar informações e permitir análises em diferentes escalas, a plataforma cria melhores condições para uma decisão contextualizada.",
+      ]}
+      note="Conhecer melhor antes de decidir melhor."
+    />
   );
 }

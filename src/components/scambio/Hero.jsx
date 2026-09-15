@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-5 text-sm uppercase tracking-[0.2em] text-foreground/70 font-medium">
-            Relacionamento, escuta, evidências e decisão.
+            Escuta, observação, relacionamento e compreensão.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
