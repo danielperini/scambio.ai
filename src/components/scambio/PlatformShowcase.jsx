@@ -32,7 +32,7 @@ export default function PlatformShowcase() {
                       <span className="w-2.5 h-2.5 rounded-full bg-primary/30" />
                       <span className="w-2.5 h-2.5 rounded-full bg-primary/30" />
                       <span className="w-2.5 h-2.5 rounded-full bg-primary/30" />
-                      <span className="ml-3 text-[11px] font-mono text-muted-foreground truncate">
+                      <span className="ml-3 text-sm font-mono text-muted-foreground truncate">
                         SCAMBIO.IA · {s.n} — {s.t}
                       </span>
                     </div>

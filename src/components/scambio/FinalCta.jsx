@@ -5,7 +5,7 @@ export default function FinalCta() {
       className="relative py-24 lg:py-36 border-t border-border/40 topo-bg overflow-hidden"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
-        <span className="text-xs font-mono uppercase tracking-[0.25em] text-primary">
+        <span className="text-sm font-mono uppercase tracking-[0.25em] text-primary">
           Perspectiva
         </span>
         <h2 className="mt-5 font-heading font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">

@@ -3,7 +3,6 @@ import { Image } from "@/components/ui/image";
 const TEAL = "#1E4E5A";
 const TERRA = "#C9795C";
 const MUTED = "#5A7775";
-const LIGHT = "#F4F8F6";
 
 const IMG = {
   registros:
@@ -48,7 +47,7 @@ function Screen({ kind, img }) {
   if (kind === "wave")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         {Array.from({ length: 5 }).map((_, i) => (
           <path key={i} d={`M0 ${90 + i * 8} Q75 ${50 - i * 8 + 90}, 150 ${90 + i * 8} T300 ${90 + i * 8}`} fill="none" stroke={TERRA} strokeOpacity={0.85 - i * 0.12} strokeWidth="1.5" />
         ))}
@@ -60,13 +59,13 @@ function Screen({ kind, img }) {
   if (kind === "pins")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         <path d="M0 140 Q75 110 150 130 T300 120" fill="none" stroke={TEAL} strokeOpacity="0.3" strokeWidth="1.5" />
         {[[70, 70], [150, 50], [230, 80], [120, 110]].map(([x, y], i) => (
           <g key={i}>
             <path d={`M${x} ${y} L${x - 6} ${y + 14} L${x + 6} ${y + 14} Z`} fill={TERRA} />
             <circle cx={x} cy={y} r="6" fill={TERRA} />
-            <circle cx={x} cy={y} r="2.5" fill="#fff" />
+            <circle cx={x} cy={y} r="2.5" fill="hsl(var(--card))" />
           </g>
         ))}
       </svg>
@@ -74,24 +73,24 @@ function Screen({ kind, img }) {
   if (kind === "form")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         <rect x="30" y="28" width="100" height="10" rx="2" fill={TEAL} opacity="0.5" />
-        <rect x="30" y="50" width="240" height="22" rx="4" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
-        <rect x="30" y="82" width="240" height="22" rx="4" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
-        <rect x="30" y="114" width="160" height="22" rx="4" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
+        <rect x="30" y="50" width="240" height="22" rx="4" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
+        <rect x="30" y="82" width="240" height="22" rx="4" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
+        <rect x="30" y="114" width="160" height="22" rx="4" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
         <rect x="210" y="114" width="60" height="22" rx="4" fill={TERRA} />
       </svg>
     );
   if (kind === "grid")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         {Array.from({ length: 6 }).map((_, i) => {
           const x = 30 + (i % 3) * 85;
           const y = 30 + Math.floor(i / 3) * 65;
           return (
             <g key={i}>
-              <rect x={x} y={y} width="70" height="50" rx="6" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
+              <rect x={x} y={y} width="70" height="50" rx="6" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
               <rect x={x + 8} y={y + 8} width="20" height="6" rx="2" fill={TERRA} opacity="0.6" />
               <rect x={x + 8} y={y + 22} width="40" height="4" rx="2" fill={MUTED} opacity="0.3" />
               <rect x={x + 8} y={y + 32} width="30" height="4" rx="2" fill={MUTED} opacity="0.3" />
@@ -103,19 +102,19 @@ function Screen({ kind, img }) {
   if (kind === "net")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         {[[150, 94], [70, 40], [230, 50], [60, 140], [240, 130], [150, 150]].map((p, i) =>
           i === 0 ? null : <line key={i} x1="150" y1="94" x2={p[0]} y2={p[1]} stroke={TERRA} strokeOpacity="0.4" />
         )}
         {[[150, 94], [70, 40], [230, 50], [60, 140], [240, 130], [150, 150]].map((p, i) => (
-          <circle key={i} cx={p[0]} cy={p[1]} r="7" fill={i === 0 ? TERRA : "#fff"} stroke={TEAL} />
+          <circle key={i} cx={p[0]} cy={p[1]} r="7" fill={i === 0 ? TERRA : "hsl(var(--card))"} stroke={TEAL} />
         ))}
       </svg>
     );
   if (kind === "layers")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         <polygon points="150,40 250,80 150,110 50,80" fill={TEAL} opacity="0.18" />
         <polygon points="150,70 230,100 150,125 70,100" fill={TERRA} opacity="0.35" />
         <polygon points="150,95 210,118 150,135 90,118" fill={TEAL} opacity="0.55" />
@@ -125,7 +124,7 @@ function Screen({ kind, img }) {
   if (kind === "chart")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
         {[40, 70, 50, 90, 65, 100].map((h, i) => (
           <rect key={i} x={30 + i * 40} y={150 - h} width="26" height={h} rx="3" fill={i % 2 ? TERRA : TEAL} opacity={i % 2 ? 0.85 : 0.5} />
         ))}
@@ -135,8 +134,8 @@ function Screen({ kind, img }) {
   if (kind === "report")
     return (
       <svg {...common}>
-        <rect width="300" height="188" fill={LIGHT} />
-        <rect x="40" y="28" width="220" height="132" rx="6" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
+        <rect width="300" height="188" fill="hsl(var(--secondary))" />
+        <rect x="40" y="28" width="220" height="132" rx="6" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
         <rect x="54" y="42" width="80" height="8" rx="2" fill={TEAL} opacity="0.5" />
         <rect x="54" y="60" width="180" height="4" rx="2" fill={MUTED} opacity="0.3" />
         <rect x="54" y="70" width="160" height="4" rx="2" fill={MUTED} opacity="0.3" />
@@ -148,8 +147,8 @@ function Screen({ kind, img }) {
     );
   return (
     <svg {...common}>
-      <rect width="300" height="188" fill={LIGHT} />
-      <rect x="30" y="28" width="240" height="132" rx="6" fill="#fff" stroke={TEAL} strokeOpacity="0.3" />
+      <rect width="300" height="188" fill="hsl(var(--secondary))" />
+      <rect x="30" y="28" width="240" height="132" rx="6" fill="hsl(var(--card))" stroke={TEAL} strokeOpacity="0.3" />
       {[0, 1, 2].map((i) => (
         <g key={i}>
           <rect x={48} y={44 + i * 36} width="80" height="26" rx="4" fill={i === 1 ? TERRA : TEAL} opacity={i === 1 ? 0.85 : 0.4} />

@@ -15,12 +15,12 @@ export default function Footer() {
       <div className="border-t border-border/40">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} SCAMBIO.IA — Conhecimento Social e Territorial</p>
-          <div className="flex gap-6">
-            <a href="#top" className="hover:text-foreground transition-colors">Topo</a>
-            <a href="#conceito" className="hover:text-foreground transition-colors">Conceito</a>
-            <a href="#como-funciona" className="hover:text-foreground transition-colors">Como funciona</a>
-            <a href="#para-quem" className="hover:text-foreground transition-colors">Para quem é</a>
-          </div>
+          <nav className="flex flex-wrap gap-1" aria-label="Rodapé">
+            <a href="#top" className="inline-flex items-center min-h-[44px] px-2 rounded-md hover:text-foreground transition-colors">Topo</a>
+            <a href="#conceito" className="inline-flex items-center min-h-[44px] px-2 rounded-md hover:text-foreground transition-colors">Conceito</a>
+            <a href="#como-funciona" className="inline-flex items-center min-h-[44px] px-2 rounded-md hover:text-foreground transition-colors">Como funciona</a>
+            <a href="#para-quem" className="inline-flex items-center min-h-[44px] px-2 rounded-md hover:text-foreground transition-colors">Para quem é</a>
+          </nav>
         </div>
       </div>
     </footer>

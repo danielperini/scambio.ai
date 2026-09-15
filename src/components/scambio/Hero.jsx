@@ -6,7 +6,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
-          <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-xs font-medium text-muted-foreground mb-6">
+          <span className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             Conhecimento Social e Territorial
           </span>
