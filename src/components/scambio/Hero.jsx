@@ -11,19 +11,20 @@ export default function Hero() {
             Conhecimento Social e Territorial
           </span>
 
-          <h1 className="font-heading font-black text-[44px] sm:text-6xl lg:text-[76px] leading-[1.05] tracking-tight text-balance">
-            Conhecimento territorial
+          <h1 className="font-heading font-black text-[44px] sm:text-6xl lg:text-[72px] leading-[1.05] tracking-tight text-balance">
+            Conhecimento social e territorial
             <br />
-            <span className="text-primary">ampliado</span>
+            <span className="text-primary">para apoiar decisões.</span>
           </h1>
 
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl">
-            O Scambio.ai transforma escuta comunitária, dados de campo e relacionamento
-            em decisões estratégicas — automaticados por IA, prontos para relatórios ESG.
+            A SCAMBIO.IA organiza informações produzidas no relacionamento com
+            comunidades, pessoas, organizações e territórios, conectando diferentes
+            fontes de conhecimento para apoiar análise, acompanhamento e tomada de decisão.
           </p>
 
           <p className="mt-5 text-sm uppercase tracking-[0.2em] text-foreground/70 font-medium">
-            Escutar. Conectar. Evidenciar. Decidir.
+            Relacionamento, escuta, evidências e decisão.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
@@ -31,15 +32,21 @@ export default function Hero() {
               href="#como-funciona"
               className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3.5 rounded-xl transition-colors glow-ring"
             >
-              Ver como funciona
+              Conheça a plataforma
+            </a>
+            <a
+              href="#cta-final"
+              className="inline-flex justify-center items-center gap-2 border border-border hover:border-primary/50 text-foreground font-semibold px-6 py-3.5 rounded-xl transition-colors"
+            >
+              Solicite uma demonstração
             </a>
           </div>
 
           <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
             {[
-              { k: "4", v: "módulos integrados" },
-              { k: "IA", v: "transcrição & insights" },
-              { k: "ESG", v: "relatórios automáticos" },
+              { k: "4", v: "pilares integrados" },
+              { k: "10+", v: "tipos de fonte" },
+              { k: "1", v: "memória territorial" },
             ].map((s) => (
               <div key={s.v}>
                 <dt className="font-heading font-bold text-2xl text-foreground">{s.k}</dt>

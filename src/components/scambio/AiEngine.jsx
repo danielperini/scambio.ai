@@ -1,8 +1,14 @@
 const NODES = [
-  { label: "Interação comunitária", sub: "notas, áudios, fotos, demandas, mensagens, análise de ar, dados, documentos", save: null },
-  { label: "Textos e dados estruturados", sub: "transcrição & estruturação por IA", save: "120h de digitação automatizadas" },
-  { label: "Classificação", sub: "tags, prioridade, território", save: "Triagem manual eliminada" },
-  { label: "Insights, tendências, riscos e soluções", sub: "direção executável", save: "Decisão em dias, não semanas" },
+  { label: "Interação comunitária", sub: "notas, áudios, fotos, demandas, mensagens, análise de ar, dados, documentos" },
+  { label: "Textos e dados estruturados", sub: "transcrição & estruturação por IA" },
+  { label: "Classificação", sub: "tags, temas, território" },
+  { label: "Insights, tendências, riscos e soluções", sub: "direção para análise" },
+];
+
+const SUPPORT = [
+  { k: "Apoio", v: "à organização, consulta e análise das informações" },
+  { k: "Escala", v: "para trabalhar com grandes volumes de informação" },
+  { k: "Interpretação", v: "permanece com as equipes" },
 ];
 
 export default function AiEngine() {
@@ -12,15 +18,18 @@ export default function AiEngine() {
         <div className="max-w-2xl mb-14">
           <span className="text-primary font-medium text-sm">O diferencial</span>
           <h2 className="font-heading font-bold text-3xl lg:text-5xl mt-3 leading-tight text-balance">
-            Um motor de decisões, não só um sistema de registros
+            Inteligência artificial aplicada ao conhecimento social
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            O Scambio.ai usa IA para transformar dado bruto de campo em direção executável —
-            transcrições automáticas, insights e relatórios que se geram sozinhos.
+            A inteligência artificial é utilizada como recurso de apoio à organização,
+            consulta e análise das informações. Pode auxiliar na transcrição de conteúdos,
+            identificação de temas, classificação de registros, localização de informações
+            e consulta à base por meio de linguagem natural. A tecnologia amplia a
+            capacidade de trabalhar com grandes volumes de informação. A interpretação
+            permanece com as equipes.
           </p>
         </div>
 
-        {/* Logic flow */}
         <div className="glass rounded-3xl p-6 lg:p-10">
           <div className="flex flex-col lg:flex-row items-stretch gap-4">
             {NODES.map((n, i) => (
@@ -30,11 +39,6 @@ export default function AiEngine() {
                     <span className="text-xs font-mono text-muted-foreground">NÓ {i + 1}</span>
                     <p className="font-heading font-semibold text-foreground mt-2">{n.label}</p>
                     <p className="text-sm text-muted-foreground mt-1">{n.sub}</p>
-                    {n.save && (
-                      <p className="mt-3 text-xs text-primary border-t border-primary/20 pt-3">
-                        {n.save}
-                      </p>
-                    )}
                   </div>
                   <span className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-primary glow-ring hidden lg:block" />
                 </div>
@@ -46,15 +50,10 @@ export default function AiEngine() {
           </div>
         </div>
 
-        {/* ROI bento */}
         <div className="mt-8 grid md:grid-cols-3 gap-4">
-          {[
-            { k: "120h", v: "de relatório manual automatizadas por ciclo" },
-            { k: "10x", v: "mais rápido para fechar demandas de território" },
-            { k: "Zero", v: "perda de histórico entre turnos e equipes" },
-          ].map((s) => (
-            <div key={s.v} className="glass rounded-2xl p-8 hover:border-primary/40 transition-colors">
-              <p className="font-heading font-black text-5xl text-primary">{s.k}</p>
+          {SUPPORT.map((s) => (
+            <div key={s.k} className="glass rounded-2xl p-8 hover:border-primary/40 transition-colors">
+              <p className="font-heading font-black text-3xl text-primary">{s.k}</p>
               <p className="mt-3 text-muted-foreground">{s.v}</p>
             </div>
           ))}

@@ -10,9 +10,10 @@ export default function Navbar() {
           </a>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+            <a href="#conceito" className="hover:text-foreground transition-colors">Conceito</a>
+            <a href="#escuta-observacao" className="hover:text-foreground transition-colors">Escuta &amp; Observação</a>
             <a href="#como-funciona" className="hover:text-foreground transition-colors">Como funciona</a>
-            <a href="#motor-ia" className="hover:text-foreground transition-colors">Motor de IA</a>
-            <a href="#economia" className="hover:text-foreground transition-colors">Economia</a>
+            <a href="#para-quem" className="hover:text-foreground transition-colors">Para quem é</a>
           </div>
         </nav>
       </div>
