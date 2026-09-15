@@ -3,7 +3,7 @@ const MODULES = [
     id: "escuta",
     tag: "01 — Escuta & Registro",
     title: "Captura de campo que vira dado estruturado",
-    desc: "Registros de interações com comunidades são analisados automaticamente e transformados em dados organizados, tags, categorias, com um mínimo de digitação manual.",
+    desc: "Registros de interações com comunidades são analisados automaticamente e transformados em dados organizados, tags, categorias, com um mínimo de digitação manual. Permite também digitação manual, leitura de relatórios, de PDFs, de docs, documentos oficiais e até de fotografias.",
     points: ["Transcrição automática por IA", "Tags e categorias inteligentes", "Histórico completo por território"],
     visual: "wave",
   },
